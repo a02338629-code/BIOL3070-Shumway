@@ -1,7 +1,7 @@
 ---
-title: "Untitled"
-author: "Your Name Here"
-date: "2025-??-??"
+title: "Warm Up Mini-Report: Mosquito Blood Hosts in Salt Lake City, Utah"
+author: "Emma Shumway"
+date: "2025-09-25"
 output:
   github_document:
     toc: true
@@ -17,9 +17,34 @@ This is an R Markdown document. Markdown is a simple formatting syntax for autho
 
 When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
 
+## BACKGROUND
+
+Fill in some text here that provides background info on the WNV system, the blood meal DNA extractions, PCR, sequencing, etc.
+
+```{r viremia}
+```
+
+## MAJOR QUESTION
+
+Fill in here the question we want to answer
+
 ```{r cars}
 summary(cars)
 ```
+
+## METHODS
+Fill in here including overview of procedure and methods used for this project
+
+# Fill in name of first analysis/plot
+```{r name-2}
+#put code here
+```
+# Fill in name of second analysis/plot
+```{r name-3}
+#put code here
+```
+
+## FORMAL ANALYSIS
 
 ## Including Plots
 
@@ -28,5 +53,4 @@ You can also embed plots, for example:
 ```{r pressure, echo=FALSE}
 plot(pressure)
 ```
-
 Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
