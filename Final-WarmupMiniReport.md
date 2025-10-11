@@ -1,54 +1,52 @@
 Warm-Up Mini-Report: Mosquito Blood Hosts in Salt Lake City, UT
 ================
 Emma Shumway
-2025-10-02
+2025-10-11
 
 - [ABSTRACT](#abstract)
 - [BACKGROUND](#background)
 - [STUDY QUESTION and HYPOTHESIS](#study-question-and-hypothesis)
-  - [Questions](#questions)
+  - [Question](#question)
   - [Hypothesis](#hypothesis)
   - [Prediction](#prediction)
 - [METHODS](#methods)
-  - [Fill in first analysis](#fill-in-first-analysis)
-  - [Fill in second analysis/plot](#fill-in-second-analysisplot)
+  - [Analysis 1: Bloodmeal Hosts and
+    WNV](#analysis-1-bloodmeal-hosts-and-wnv)
+  - [Analysis 2: WNV Host
+    Significance](#analysis-2-wnv-host-significance)
 - [DISCUSSION](#discussion)
-  - [Interpretation - fill in
-    analysis](#interpretation---fill-in-analysis)
-  - [Interpretation - fill in
-    analysis/plot](#interpretation---fill-in-analysisplot)
+  - [Interpretation - Bloodmeal Hosts and
+    WNV](#interpretation---bloodmeal-hosts-and-wnv)
+  - [Interpretation - WNV Host
+    Significance](#interpretation---wnv-host-significance)
 - [CONCLUSION](#conclusion)
 - [REFERENCES](#references)
 
 # ABSTRACT
 
-Fill in abstract at the end after we have finished the methods, results,
-discussion, conclusions and know what our data “says”.
+This report investigates the WNV transmission cycle of birds to
+mosquitos in Utah, which can be evaluated by analyzing mosquito
+bloodmeals. House finches were determined to be of interest as a
+potential amplifying pool for WNV. Bloodmeal samples from Utah were
+collected, amplified, sequenced, compared to known species’ sequences,
+and evaluated. It was concluded via statistical tests that having more
+house finches available increases the chances of WNV appearing in
+mosquito pools, which may aid WNV mosquito abatement efforts in Utah.
 
 # BACKGROUND
 
-*Fill in some text here that provides background info on the WNV system,
-the blood meal DNA extractions, PCR, sequencing, etc. and the foundation
-for our question/hypothesis.*
-
-The West Nile Virus (WNV) can be found in reservoirs of birds.
-Mosquitoes transmit the infection to humans and/or other animals as they
-take bloodmeals. Samples of mosquito bloodmeals taken from across the
-state can provide information on transmission cycle patterns that can be
-used to inform mosquito abatement efforts in the state. These samples
-can be amplified via PCR, sequenced, and compared to public datasets to
-map types of mosquito hosts where.
-
-*For example, we can use the viremia duration (Kumar et al., 2003) bar
-plot (make sure to reference sources!!!) to illustrate the potential
-importance of house finches in WNV transmission and as the logical
-foundation for our hypothesis that house finches serve as amplifying
-hosts for WNV… and the prediction that locations with more house finches
-in our blood host analysis are also the same locations with higher
-positive tests for WNV in mosquito pools…*
-
-NOTE: Examples of data you can plot for the background info at
-<https://github.com/saarman/BIOL3070/>
+The West Nile Virus (WNV) is a potentially serious viral disease that
+can be found naturally in reservoirs of birds. Mosquitoes are known to
+transmit the infection to humans and other animals as they take
+bloodmeals from infected birds (Hartemink et al., 2007). These
+bloodmeals can be sampled, amplified via PCR, sequenced, and compared to
+public datasets to map mosquito bloodmeals to host populations. Samples
+of mosquito bloodmeals taken from across Utah can provide information on
+transmission cycle patterns that can be used to inform mosquito
+abatement efforts in the state (White, 2025). Prior research points to
+the potential significance of house finches in serving as an amplifying
+source pool for WNV (Kumar et al., 2003), as seen in the bar plot below.
+The implications of this data serves as a foundation for this report.
 
 ``` r
 # Manually transcribe duration (mean, lo, hi) from the last table column
@@ -90,35 +88,32 @@ arrows(duration$lo, bp, duration$hi, bp,
 
 # STUDY QUESTION and HYPOTHESIS
 
-## Questions
+## Question
 
-*Fill in here, the question we want to answer… e.g. What bird species is
-acting as WNV amplifying host in Salt Lake City?* What bird species is
-acting as WNV amplifying hose in Salt Lake City?
+What bird species is acting as WNV amplifying host in Salt Lake City?
 
 ## Hypothesis
 
-*Fill in hypothesis… e.g. House finches are acting as important
-amplifying hosts of WNV in Salt Lake City.* House finches are acting as
-important amplifying hosts of WNV in Salt Lake City.
+Given prior data, there is potential that house finches act as important
+amplifying hosts of WNV in Salt Lake City.
 
 ## Prediction
 
-*Fill in prediction… e.g. If house finches are acting as important
-amplifying hosts, we predict that trapping locations where mosquitoes
-feed on house finches will also have higher rates of confirmed WNV in
-tested mosquito pools.*
+If house finches are acting as important amplifying hosts, locations
+with more house finches in the blood host analysis will also be the same
+locations with higher positive tests for WNV in mosquito pools.
 
 # METHODS
 
-*Fill in here, including overview of procedure and methods used for this
-project.*
+Mosquitoes were collected in traps in the Salt Lake City area. Bloodmeal
+samples were retrieved, amplified with PCR, analyzed via gel
+electrophoresis, and sequenced. The National Center for Biotechnology
+Information’s Blast tool was used to compare the resulting sequences to
+known sequences in a national database to identify bloodmeal sources.
+RStudio Posit Cloud was then used to visualize and interpret datasets
+via charts.
 
-## Fill in first analysis
-
-``` r
-# put code for analysis here
-```
+## Analysis 1: Bloodmeal Hosts and WNV
 
 Horizontal plots:
 
@@ -218,11 +213,7 @@ par(op)
 host_species_colors <- species_colors
 ```
 
-## Fill in second analysis/plot
-
-``` r
-# put code for plotting here
-```
+## Analysis 2: WNV Host Significance
 
 ``` r
 # second-analysis-or-plot, glm with house finch alone against binary +/_
@@ -281,18 +272,48 @@ summary(glm2)
 
 # DISCUSSION
 
-## Interpretation - fill in analysis
+## Interpretation - Bloodmeal Hosts and WNV
 
-## Interpretation - fill in analysis/plot
+The plots show the various species of birds found in the mosquito
+bloodmeals and their counts. While bloodmeals positive and negative for
+WNV have large numbers of house finch hosts, the WNV positive chart
+shows over double the number of positive WNV cases compared to the
+number of negative WNV cases in house finch hosts. This is a good signal
+that house finches are amplifying pools for WNV. It must be noted
+though, that this test does not indicate statistical signifance without
+further analysis.
+
+## Interpretation - WNV Host Significance
+
+These GLM tests showed the significance of the correlation between house
+finches and positive and negative WNV. The predictor variable is house
+finch bloodmeals, while the response variable is WNV. The second GLM
+test showed a slightly positive correlation of ~0.027, and even though
+the slope isn’t very high, it has a highly signifcant p-value
+(Pr(\>/t/)) of 0.0000435. This means that is reasonable to suggest that
+having more house finches available does increase the chances of WNV
+appearing in mosquito pools.
 
 # CONCLUSION
 
+The data suggests there is a correlation between house finches and WNV
+in Utah. This information can be useful for mosquito abatement efforts,
+where a more targeted focus on house finches may help curb the spread of
+WNV.
+
 # REFERENCES
 
-1.  Komar N, Langevin S, Hinten S, Nemeth N, Edwards E, Hettler D, Davis
+1.  Hartemink NA, Davis SA, Reiter P, Hubálek Z, Heesterbeek JA.
+    Importance of bird-to-bird transmission for the establishment of
+    West Nile virus. Vector Borne Zoonotic Dis. 2007 Winter;7(4):575-84.
+    doi: 10.1089/vbz.2006.0613. PMID: 17979541.
+
+2.  Komar N, Langevin S, Hinten S, Nemeth N, Edwards E, Hettler D, Davis
     B, Bowen R, Bunning M. Experimental infection of North American
     birds with the New York 1999 strain of West Nile virus. Emerg Infect
     Dis. 2003 Mar;9(3):311-22. <https://doi.org/10.3201/eid0903.020628>
 
-2.  ChatGPT. OpenAI, version Jan 2025. Used as a reference for functions
-    such as plot() and to correct syntax errors. Accessed 2025-10-02.
+3.  White, G. BIOL 3070 Lecture. 2025, Oct.
+
+4.  ChatGPT. OpenAI, version Jan 2025. Used as a reference for functions
+    such as plot() and to correct syntax errors. Accessed 2025-10-11.
