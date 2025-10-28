@@ -29,18 +29,6 @@ This report \_\_\_\_\_.
 
 Here is some background: \_\_\_\_\_.
 
-``` r
-library(ggplot2)
-
-age <- data.frame(category = c(" 0-4", " 5-11", "12-17", "18-24", "25-34", "35-64", "65+"), value = c(1.4, 2.4, 2.0, 3.8, 6.4, 11.5, 27.1))
-
-ggplot(age, aes(x = category, y = value)) +
-  geom_bar(stat = "identity", fill = "darkred") + # stat="identity" uses y-values directly
-  labs(title = "Asthma Deaths By Age",x = "Age (Years)",y = "Asthma-Related Deaths Per Million")
-```
-
-![](FinalRMarkdownProject_files/figure-gfm/age%20and%20deaths-1.png)<!-- -->
-
 # STUDY QUESTION and HYPOTHESIS
 
 ## Question
@@ -70,6 +58,18 @@ certain factors.
 ## Analysis 2: Asthma and Sex
 
 ## Analysis 3: Asthma and Age
+
+``` r
+library(ggplot2)
+
+age <- data.frame(category = c(" 0-4", " 5-11", "12-17", "18-24", "25-34", "35-64", "65+"), value = c(1.4, 2.4, 2.0, 3.8, 6.4, 11.5, 27.1))
+
+ggplot(age, aes(x = category, y = value)) +
+  geom_bar(stat = "identity", fill = "darkred") + # stat="identity" uses y-values directly
+  labs(title = "Asthma Deaths By Age",x = "Age (Years)",y = "Asthma-Related Deaths Per Million")
+```
+
+![](FinalRMarkdownProject_files/figure-gfm/age%20and%20deaths-1.png)<!-- -->
 
 # DISCUSSION
 
