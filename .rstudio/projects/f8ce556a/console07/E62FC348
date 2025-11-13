@@ -47,3 +47,111 @@ Initialized empty Git repository in /cloud/home/r1119511/.git/
 ]0;~~$ git remote add origin https://github.com/a02338629-code/main.git
 fatal: remote origin already exists.
 ]0;~~$ git add .
+]0;~~$ git commit -m "Updated report for Homework 12"
+[master (root-commit) a112e45] Updated report for Homework 12
+ 92 files changed, 4881 insertions(+)
+ create mode 100644 .config/R/rsconnect/accounts/posit.cloud/Emma Shumway.dcf
+ create mode 100644 .config/rstudio/rstudio-prefs.json
+ create mode 100644 .gitconfig
+ create mode 100644 .rsconnect-python/servers.json
+ create mode 100644 .rstudio/addin_registry
+ create mode 100644 .rstudio/client-state/environment-grid.persistent
+ create mode 100644 .rstudio/client-state/source-column-manager.persistent
+ create mode 100644 .rstudio/client-state/themes.persistent
+ create mode 100644 .rstudio/client-state/workbenchp.persistent
+ create mode 100644 .rstudio/history_database
+ create mode 100644 .rstudio/log/rsession-r1119511.log
+ create mode 100644 .rstudio/monitored/lists/command_palette_mru
+ create mode 100644 .rstudio/monitored/lists/file_mru
+ create mode 100644 .rstudio/monitored/lists/help_history_links
+ create mode 100644 .rstudio/monitored/lists/plot_publish_mru
+ create mode 100644 .rstudio/monitored/lists/project_mru
+ create mode 100644 .rstudio/monitored/lists/project_name_mru
+ create mode 100644 .rstudio/monitored/lists/user_dictionary
+ create mode 100644 .rstudio/projects/f8ce556a/console07/22215E41
+ create mode 100644 .rstudio/projects/f8ce556a/console07/22215E41.env
+ create mode 100644 .rstudio/projects/f8ce556a/console07/E62FC348
+ create mode 100644 .rstudio/projects/f8ce556a/console07/E62FC348.env
+ create mode 100644 .rstudio/projects/f8ce556a/console07/INDEX001
+ create mode 100644 .rstudio/projects_settings/last-project-path
+ create mode 100755 .rstudio/projects_settings/next-session-project
+ create mode 100644 .rstudio/projects_settings/project-id-mappings
+ create mode 100644 .rstudio/projects_settings/update-pkg-install-default
+ create mode 100644 .rstudio/rstudio-server.json
+ create mode 100644 .rstudio/rversion-settings/37ed7f8ce556a-RVersion
+ create mode 100644 .rstudio/rversion-settings/37ed7f8ce556a-RVersionHome
+ create mode 100644 .rstudio/rversion-settings/37ed7f8ce556a-RVersionLabel
+ create mode 100644 .rstudio/sessions/active/session-de83db41/explorer-cache/f102cd45626046c9aa94053537b8ea5f
+ create mode 100644 .rstudio/sessions/active/session-de83db41/graphics-r3/INDEX
+ create mode 100644 .rstudio/sessions/active/session-de83db41/graphics-r3/empty.png
+ create mode 100644 .rstudio/sessions/active/session-de83db41/properites/activity_state
+ create mode 100644 .rstudio/sessions/active/session-de83db41/properites/blocking_suspend
+ create mode 100644 .rstudio/sessions/active/session-de83db41/properites/created
+ create mode 100644 .rstudio/sessions/active/session-de83db41/properites/editor
+ create mode 100644 .rstudio/sessions/active/session-de83db41/properites/executing
+ create mode 100644 .rstudio/sessions/active/session-de83db41/properites/initial
+ create mode 100644 .rstudio/sessions/active/session-de83db41/properites/label
+ create mode 100644 .rstudio/sessions/active/session-de83db41/properites/last-used
+ create mode 100644 .rstudio/sessions/active/session-de83db41/properites/last_resumed
+ create mode 100644 .rstudio/sessions/active/session-de83db41/properites/last_state_updated
+ create mode 100644 .rstudio/sessions/active/session-de83db41/properites/launch-parameters
+ create mode 100644 .rstudio/sessions/active/session-de83db41/properites/project
+ create mode 100644 .rstudio/sessions/active/session-de83db41/properites/r-version
+ create mode 100644 .rstudio/sessions/active/session-de83db41/properites/r-version-home
+ create mode 100644 .rstudio/sessions/active/session-de83db41/properites/r-version-label
+ create mode 100644 .rstudio/sessions/active/session-de83db41/properites/running
+ create mode 100644 .rstudio/sessions/active/session-de83db41/properites/save_prompt_required
+ create mode 100644 .rstudio/sessions/active/session-de83db41/properites/suspend_timestamp
+ create mode 100644 .rstudio/sessions/active/session-de83db41/properites/working-dir
+ create mode 100644 .rstudio/sessions/active/session-de83db41/rmd-outputs
+ create mode 100644 .rstudio/sessions/active/session-de83db41/session-persistent-state
+ create mode 100644 .rstudio/sessions/active/session-de83db41/suspended-session-data/after_restart_command
+ create mode 100644 .rstudio/sessions/active/session-de83db41/suspended-session-data/built_package_path
+ create mode 100644 .rstudio/sessions/active/session-de83db41/suspended-session-data/console_actions
+ create mode 100644 .rstudio/sessions/active/session-de83db41/suspended-session-data/environment
+ create mode 100644 .rstudio/sessions/active/session-de83db41/suspended-session-data/environment_vars
+ create mode 100644 .rstudio/sessions/active/session-de83db41/suspended-session-data/history
+ create mode 100644 .rstudio/sessions/active/session-de83db41/suspended-session-data/libpaths
+ create mode 100644 .rstudio/sessions/active/session-de83db41/suspended-session-data/options
+ create mode 100644 .rstudio/sessions/active/session-de83db41/suspended-session-data/rversion
+ create mode 100644 .rstudio/sessions/active/session-de83db41/suspended-session-data/search_path/package_paths
+ create mode 100644 .rstudio/sessions/active/session-de83db41/suspended-session-data/search_path/search_path_elements
+ create mode 100644 .rstudio/sessions/active/session-de83db41/suspended-session-data/settings
+ create mode 100644 .rstudio/sessions/active/session-de83db41/unsaved-notebooks/7C9BA99E/1/chunks.json
+ create mode 100644 .rstudio/sessions/active/session-de83db41/unsaved-notebooks/7C9BA99E/1/ckqv01jb9eekx/00000f.csv
+ create mode 100644 .rstudio/sessions/active/session-de83db41/unsaved-notebooks/7C9BA99E/1/ckqv01jb9eekx/000010.error
+ create mode 100644 .rstudio/sessions/active/session-de83db41/unsaved-notebooks/7C9BA99E/1/csetup_chunk/00000f.csv
+ create mode 100644 .rstudio/sessions/active/session-de83db41/unsaved-notebooks/B625521C/1/c74dkno7pdif7/00001d.csv
+ create mode 100644 .rstudio/sessions/active/session-de83db41/unsaved-notebooks/B625521C/1/c74dkno7pdif7/00001f.csv
+ create mode 100644 .rstudio/sessions/active/session-de83db41/unsaved-notebooks/B625521C/1/c74dkno7pdif7/000020.metadata
+ create mode 100644 .rstudio/sessions/active/session-de83db41/unsaved-notebooks/B625521C/1/c74dkno7pdif7/000020.png
+ create mode 100644 .rstudio/sessions/active/session-de83db41/unsaved-notebooks/B625521C/1/c74dkno7pdif7/000020.snapshot
+ create mode 100644 .rstudio/sessions/active/session-de83db41/unsaved-notebooks/B625521C/1/c9a2olvcjanrt/000035.csv
+ create mode 100644 .rstudio/sessions/active/session-de83db41/unsaved-notebooks/B625521C/1/caxeek9kmy3u6/00000f.csv
+ create mode 100644 .rstudio/sessions/active/session-de83db41/unsaved-notebooks/B625521C/1/caxeek9kmy3u6/000011.csv
+ create mode 100644 .rstudio/sessions/active/session-de83db41/unsaved-notebooks/B625521C/1/caxeek9kmy3u6/000013.csv
+ create mode 100644 .rstudio/sessions/active/session-de83db41/unsaved-notebooks/B625521C/1/caxeek9kmy3u6/000014.metadata
+ create mode 100644 .rstudio/sessions/active/session-de83db41/unsaved-notebooks/B625521C/1/caxeek9kmy3u6/000014.png
+ create mode 100644 .rstudio/sessions/active/session-de83db41/unsaved-notebooks/B625521C/1/caxeek9kmy3u6/000014.snapshot
+ create mode 100644 .rstudio/sessions/active/session-de83db41/unsaved-notebooks/B625521C/1/chunks.json
+ create mode 100644 .rstudio/sessions/active/session-de83db41/unsaved-notebooks/B625521C/1/cr26nra6vu3ho/00000f.csv
+ create mode 100644 .rstudio/sessions/active/session-de83db41/unsaved-notebooks/B625521C/1/csetup_chunk/00000f.csv
+ create mode 100644 .rstudio/sessions/active/session-de83db41/viewer-cache/D19541F1.Rdata
+ create mode 100644 .sh_history
+ create mode 100644 .subversion/README.txt
+ create mode 100644 .subversion/config
+ create mode 100644 .subversion/servers
+ create mode 120000 R
+]0;~~$ git origin push[K[K[K[K[K[K[K[K[K[K[K[K push origin mia[K[Kain --forece[K[K[Kce
+error: src refspec main does not match any
+[31merror: failed to push some refs to 'https://github.com/yourusername/yourrepo.git'
+[m]0;~~$ git log
+[?1h=[33mcommit a112e45554c3f2b444b17361038dd2a1f1713196[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m[m
+Author: Emma Shumway <A02338629@usu.edu>[m
+Date:   Thu Nov 13 02:35:41 2025 +0000[m
+[m
+    Updated report for Homework 12[m
+[K[?1l>]0;~~$ git remote -v
+origin	https://github.com/yourusername/yourrepo.git (fetch)
+origin	https://github.com/yourusername/yourrepo.git (push)
+]0;~~$ git add .
