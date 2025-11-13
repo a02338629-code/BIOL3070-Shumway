@@ -448,3 +448,15 @@
 2025-11-13T02:43:55.119584Z [rsession-r1119511] INFO No keybindings/addins.json found at /etc/rstudio/keybindings/addins.json
 2025-11-13T02:43:55.119963Z [rsession-r1119511] INFO No keybindings/editor_bindings.json found at /etc/rstudio/keybindings/editor_bindings.json
 2025-11-13T02:43:57.379974Z [rsession-r1119511] ERROR system error 84 (Invalid or incomplete multibyte or wide character) [str: individual’s, len: 14, from: UTF-8, to: ISO8859-1]; OCCURRED AT rstudio::core::Error rstudio::r::util::{anonymous}::iconvstrImpl(const string&, const string&, const string&, bool, std::string*) src/cpp/r/RUtil.cpp:268; LOGGED FROM: rstudio::core::Error rstudio::session::modules::spelling::{anonymous}::checkSpelling(const rstudio::core::json::JsonRpcRequest&, rstudio::core::json::JsonRpcResponse*) src/cpp/session/modules/SessionSpelling.cpp:225
+2025-11-13T03:06:34.440243Z [rsession-r1119511] INFO Lowered CPU priority during suspend
+2025-11-13T03:07:04.022918Z [rsession-r1119511] INFO Reading rsession configuration from '/etc/rstudio/rsession.conf'
+2025-11-13T03:07:04.128127Z [rsession-r1119511] INFO Encryption versions set to max: 0, min: 0
+2025-11-13T03:07:04.526609Z [rsession-r1119511] INFO Set CRAN URL for session to 'https://packagemanager.posit.co/cran/__linux__/focal/latest' (source: preference defaults)
+2025-11-13T03:07:05.809823Z [rsession-r1119511] INFO Databricks pane requires user-provided DATABRICKS_HOST and DATABRICKS_TOKEN
+2025-11-13T03:07:05.814404Z [rsession-r1119511] INFO Detected existing system-wide Git configuration, skipping
+2025-11-13T03:07:10.456907Z [rsession-r1119511] INFO No admin notifications found at /etc/rstudio/notifications.conf
+2025-11-13T03:13:49.423511Z [rsession-r1119511] INFO No keybindings/addins.json found at /etc/rstudio/keybindings/addins.json
+2025-11-13T03:13:49.423906Z [rsession-r1119511] INFO No keybindings/editor_bindings.json found at /etc/rstudio/keybindings/editor_bindings.json
+2025-11-13T03:13:49.424218Z [rsession-r1119511] INFO No keybindings/rstudio_bindings.json found at /etc/rstudio/keybindings/rstudio_bindings.json
+2025-11-13T03:13:51.515231Z [rsession-r1119511] ERROR system error 84 (Invalid or incomplete multibyte or wide character) [str: individual’s, len: 14, from: UTF-8, to: ISO8859-1]; OCCURRED AT rstudio::core::Error rstudio::r::util::{anonymous}::iconvstrImpl(const string&, const string&, const string&, bool, std::string*) src/cpp/r/RUtil.cpp:268; LOGGED FROM: rstudio::core::Error rstudio::session::modules::spelling::{anonymous}::checkSpelling(const rstudio::core::json::JsonRpcRequest&, rstudio::core::json::JsonRpcResponse*) src/cpp/session/modules/SessionSpelling.cpp:225
+2025-11-13T03:44:32.842036Z [rsession-r1119511] WARNING PrivateCommand timeout; LOGGED FROM: bool rstudio::core::terminal::PrivateCommand::onTryCapture(rstudio::core::system::ProcessOperations&, bool) src/cpp/core/terminal/PrivateCommand.cpp:109
