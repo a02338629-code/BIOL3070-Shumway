@@ -155,3 +155,25 @@ Date:   Thu Nov 13 02:35:41 2025 +0000[m
 origin	https://github.com/yourusername/yourrepo.git (fetch)
 origin	https://github.com/yourusername/yourrepo.git (push)
 ]0;~~$ git add .
+]0;~~$ git commit -m "Updated report for Homework 12"
+[master 7c22110] Updated report for Homework 12
+ 1 file changed, 108 insertions(+)
+]0;~~$ git push origin main --force
+error: src refspec main does not match any
+[31merror: failed to push some refs to 'https://github.com/yourusername/yourrepo.git'
+[m]0;~~$ git push origin master --forece[K[K[K[Krce
+Username for 'https://github.com': a02338629-code
+Password for 'https://a02338629-code@github.com': 
+remote: Repository not found.
+fatal: repository 'https://github.com/yourusername/yourrepo.git/' not found
+]0;~~$ git a[K[K[K[K[Kt add .[K[K[K[K[Kremote set-url origin https://github.com/a02338629-code/BIOL3070-Shumway
+bash: t: command not found
+]0;~~$ git remote -v
+origin	https://github.com/yourusername/yourrepo.git (fetch)
+origin	https://github.com/yourusername/yourrepo.git (push)
+]0;~~$ git remote set-url origin https://github.com/a02338629-code/homework12.git
+]0;~~$ git remote set-r[Kurl origin https://github.com/a02338629-code/BIOL3070-Shumway
+]0;~~$ git remote -v
+origin	https://github.com/a02338629-code/BIOL3070-Shumway (fetch)
+origin	https://github.com/a02338629-code/BIOL3070-Shumway (push)
+]0;~~$ git add .
