@@ -1,0 +1,1 @@
+"0","plot(life_expectancy$Year,life_expectancy$LifeExpectancy, pch = 19, col = ""grey"", xlab = ""Year of Birth"", ylab = ""Life Expectancy"")"

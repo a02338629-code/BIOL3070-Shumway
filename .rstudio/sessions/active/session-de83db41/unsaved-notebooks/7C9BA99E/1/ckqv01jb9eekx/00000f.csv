@@ -1,0 +1,5 @@
+"0",""
+"0","# load data"
+"0","life_expectancy <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2023/2023-12-05/life_expectancy.csv')"
+"2","Error in loadNamespace(x) : there is no package called ‘readr’
+"

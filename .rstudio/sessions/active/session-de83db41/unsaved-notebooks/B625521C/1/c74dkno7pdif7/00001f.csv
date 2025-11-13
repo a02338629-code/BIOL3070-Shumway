@@ -1,0 +1,1 @@
+"0","abline(lm(LifeExpectancy ~ Year, data = life_expectancy[life_expectancy$Year > 1883,]), lt = 1)"

@@ -1,0 +1,2 @@
+"0","# Scatterplot with line of best fit"
+"0","plot(life_expectancy$Year[life_expectancy$Year > 1883],life_expectancy$LifeExpectancy[life_expectancy$Year > 1883], pch = 19, col = ""grey"", xlab = ""Year of Birth"", ylab = ""Life Expectancy"")"

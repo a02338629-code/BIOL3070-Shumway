@@ -1,0 +1,696 @@
+1756411770247:#Day 1 example plot
+1756411770248:verimia <- read.csv("viremia_data_full.csv")
+1756411850446:View(verimia)
+1756411911405:#Day 1 example plot
+1756411911406:virimia <- read.csv("viremia_data_full.csv")
+1756411915200:View(virimia)
+1756412022217:colnames(viremia) <- c("Bird","n","Species","Family","Order","1","3","4","6")
+1756412052868:#Day 1 example plot
+1756412052868:viremia <- read.csv("viremia_data_full.csv")
+1756412054607:View(viremia)«
+1756412057298:View(viremia)
+1756412060706:colnames(viremia) <- c("Bird","n","Species","Family","Order","1","3","4","6")
+1756412101093:cols <- c("black","grey",rainbow(26[4:26]))
+1756412240234:#plot by species
+1756412240235:plot(c(1,3,4,6),as.numeric(viremia[1,6:9]),type = "1", lwd =2, xlab = "Day Postinfection",ylab = "Log PFU/ml Serum")
+1756412274939:#plot by species
+1756412274939:plot(c(1,3,4,6),as.numeric(viremia[1,6:9]),type = "l", lwd =2, xlab = "Day Postinfection",ylab = "Log PFU/ml Serum")
+1756412378890:for (i in 2:nrow(viremia)){lines(c(1,3,4,6,as.numeric(viremia[i,6:9]),lwd = 2,col = cols))}
+1756412469716:#choose colors
+1756412469716:cols <- c("black","grey",rainbow(26[4:26]))
+1756412513232:#choose colors
+1756412513232:cols <- c("black","grey","red")
+1756412517660:for (i in 2:nrow(viremia)){lines(c(1,3,4,6,as.numeric(viremia[i,6:9]),lwd = 2,col = cols))}
+1756412637872:#plot by species
+1756412637872:plot(c(1,3,4,6),as.numeric(viremia[1,6:9]),type = "l", lwd =2, ylim = range(viremia[,6:9]xlab = "Day Postinfection",ylab = "Log PFU/ml Serum")
+1756412696087:plot(c(1,3,4,6),as.numeric(viremia[1,6:9]),
+1756412696087:type = "l", lwd =2, ylim = range(viremia[,6:9],
+1756412696087:xlab = "Day Postinfection",
+1756412696087:ylab = "Log PFU/ml Serum")
+1756412699093:for (i in 2:nrow(viremia)){lines(c(1,3,4,6,as.numeric(viremia[i,6:9]),lwd = 2,col = cols))}
+1756412713325:for (i in 2:nrow(viremia)){lines(c(1,3,4,6,as.numeric(viremia[i,6:9]),lwd = 2,col = cols))}
+1756412729611:warnings()
+1756412767153:#plot by species
+1756412767154:plot(c(1,3,4,6),as.numeric(viremia[1,6:9]),
+1756412767154:type = "l", lwd =2, ylim = range(viremia[,6:9],
+1756412767154:xlab = "Day Postinfection",
+1756412767154:ylab = "Log PFU/ml Serum")
+1756412767154:for (i in 2:nrow(viremia)){lines(c(1,3,4,6),as.numeric(viremia[i,6:9]),lwd = 2,col = cols))}
+1756412781745:#plot by species
+1756412781746:plot(c(1,3,4,6),as.numeric(viremia[1,6:9]),
+1756412781746:type = "l", lwd =2, ylim = range(viremia[,6:9],
+1756412781746:xlab = "Day Postinfection",
+1756412781746:ylab = "Log PFU/ml Serum")
+1756412781746:for (i in 2:nrow(viremia)){lines(c(1,3,4,6),as.numeric(viremia[i,6:9]),lwd = 2,col = cols)) + }
+1756412835873:plot(c(1,3,4,6),as.numeric(viremia[1,6:9]),
+1756412835874:type = "l", lwd =2, ylim = (range(viremia[,6:9], na.rm = TRUE),
+1756844327270:X <- 5
+1756844342025:x <- 5
+1756844367458:x <- 6
+1756844426876:X <- NULL
+1756844440316:y <- "cat"
+1756844454866:5+6
+1756844591354:a <- 5
+1756844599375:b <- 5
+1756844615469:b <- "5"
+1756844622351:c <- TRUE
+1756844664069:d <- factor(c("A","B","A","C"))
+1756844671781:a+2
+1756844688372:b == "5"
+1756844711848:lc
+1756844719205:1c
+1756844731672:levels(d)
+1756845129839:!c
+1757447864294:knitr::opts_chunk$set(echo = TRUE)
+1757447878973:summary(cars)
+1758052894149:?round()
+1758053175078:round () #nothing is defined, everything left to default
+1758053192801:round(x = 3.141593) #define x, leave digits default)
+1758053196797:round(x = 3.141593, digits = 6) #define x and digits
+1758055335096:knitr::opts_chunk$set(echo = TRUE)
+1758226541260:round(x=333.111, digits = 3)
+1758226624764:round(333.111)
+1758226677239:?mean()
+1758226824479:mean(c(1,2,3,4), trim=0, na.rm=FALSE)
+1758226834588:mean(c(1,2,3,4), trim=0, na.rm=TRUE)
+1758226901980:mean(c(1.5,2.5,3.5,4.5), trim=0, na.rm=TRUE)
+1758226905645:mean(c(1.5,2.5,3.5,4.5), trim=0, na.rm=FALSE)
+1758226958444:mean(c(1.5,2.5,3.5,4.5), trim=0.5, na.rm=FALSE)
+1758656745462:?read.csv()
+1758657391344:data <- read.csv(file = "bloodmeal_for_BIOL3070.csv")
+1758657391354:head(data)
+1758657391364:view(data)
+1758657400538:View(data)
+1758830080282:View("bloodmeal_plusWNV_for_BIOL3070.csv")
+1758830171577:bloodmeal_data <- read.csv(file = "bloodmeal_plusWNV_for_BIOL3070.csv")
+1758830182993:View(bloodmeal_data)
+1758830618516:knitr::opts_chunk$set(echo = TRUE)
+1758830618748:## import counts_matrix: data.frame with column 'loc_positives' (0/1) and host columns 'host_*'
+1758830618750:counts_matrix <- read.csv("./bloodmeal_plusWNV_for_BIOL3070.csv")
+1758830618803:## 1) Identify host columns
+1758830618804:host_cols <- grep("^host_", names(counts_matrix), value = TRUE)
+1758830618806:if (length(host_cols) == 0) {
+1758830618807:stop("No columns matching '^host_' were found in counts_matrix.")
+1758830618808:}
+1758830618809:## 2) Ensure loc_positives is present and has both levels 0 and 1 where possible
+1758830618810:counts_matrix$loc_positives <- factor(counts_matrix$loc_positives, levels = c(0, 1))
+1758830618831:## 3) Aggregate host counts by loc_positives
+1758830618831:agg <- stats::aggregate(
+1758830618832:counts_matrix[, host_cols, drop = FALSE],
+1758830618833:by = list(loc_positives = counts_matrix$loc_positives),
+1758830618834:FUN = function(x) sum(as.numeric(x), na.rm = TRUE)
+1758830618835:)
+1758830618861:## make sure both rows exist; if one is missing, add a zero row
+1758830618862:need_levels <- setdiff(levels(counts_matrix$loc_positives), as.character(agg$loc_positives))
+1758830618864:if (length(need_levels)) {
+1758830618865:zero_row <- as.list(rep(0, length(host_cols)))
+1758830618865:names(zero_row) <- host_cols
+1758830618866:for (lv in need_levels) {
+1758830618867:agg <- rbind(agg, c(lv, zero_row))
+1758830618868:}
+1758830618869:## restore proper type
+1758830618869:agg$loc_positives <- factor(agg$loc_positives, levels = c("0","1"))
+1758830618870:## coerce numeric host cols (they may have become character after rbind)
+1758830618871:for (hc in host_cols) agg[[hc]] <- as.numeric(agg[[hc]])
+1758830618872:agg <- agg[order(agg$loc_positives), , drop = FALSE]
+1758830618872:}
+1758830618874:## 4) Decide species order (overall abundance, descending)
+1758830618874:overall <- colSums(agg[, host_cols, drop = FALSE], na.rm = TRUE)
+1758830618877:host_order <- names(sort(overall, decreasing = TRUE))
+1758830618879:species_labels <- rev(sub("^host_", "", host_order))  # nicer labels
+1758830618881:## 5) Build count vectors for each panel in the SAME order
+1758830618882:counts0 <- rev(as.numeric(agg[agg$loc_positives == 0, host_order, drop = TRUE]))
+1758830618884:counts1 <- rev(as.numeric(agg[agg$loc_positives == 1, host_order, drop = TRUE]))
+1758830618887:## 6) Colors: reuse your existing 'cols' if it exists and is long enough; otherwise generate
+1758830618887:if (exists("cols") && length(cols) >= length(host_order)) {
+1758830618888:species_colors <- setNames(cols[seq_along(host_order)], species_labels)
+1758830618889:} else {
+1758830618890:species_colors <- setNames(rainbow(length(host_order) + 10)[seq_along(host_order)], species_labels)
+1758830618891:}
+1758830618893:## 7) Shared x-limit for comparability
+1758830618894:xmax <- max(c(counts0, counts1), na.rm = TRUE)
+1758830618896:xmax <- if (is.finite(xmax)) xmax else 1
+1758830618897:xlim_use <- c(0, xmax * 1.08)
+1758830618899:## 8) Plot: two horizontal barplots with identical order and colors
+1758830618899:op <- par(mfrow = c(1, 2),
+1758830618900:mar = c(4, 12, 3, 2),  # big left margin for species names
+1758830618901:xaxs = "i")           # a bit tighter axis padding
+1758830618929:## Panel A: No WNV detected (loc_positives = 0)
+1758830618930:barplot(height = counts0,
+1758830618931:names.arg = species_labels,
+1758830618932:cex.names = .5,
+1758830618933:cex.axis = .5,
+1758830618934:col = rev(unname(species_colors[species_labels])),
+1758830618935:horiz = TRUE,
+1758830618936:las = 1,
+1758830618937:xlab = "Bloodmeal counts",
+1758830618947:main = "Locations WNV (-)",
+1758830618948:xlim = xlim_use)
+1758830619043:## Panel B: WNV detected (loc_positives = 1)
+1758830619045:barplot(height = counts1,
+1758830619046:names.arg = species_labels,
+1758830619046:cex.names = .5,
+1758830619047:cex.axis = .5,
+1758830619048:col = rev(unname(species_colors[species_labels])),
+1758830619049:horiz = TRUE,
+1758830619050:las = 1,
+1758830619051:xlab = "Bloodmeal counts",
+1758830619052:main = "Locations WNV (+)",
+1758830619053:xlim = xlim_use)
+1758830619058:par(op)
+1758830619061:## Keep the colors mapping for reuse elsewhere
+1758830619062:host_species_colors <- species_colors
+1758830685368:```{r horiz-plot,fig.align='left',fig.width=7,fig.height=7, warning=FALSE}
+1758830690502:```{r horiz-plot,fig.align='left',fig.width=7,fig.height=7, warning=FALSE}
+1758830807544:## import counts_matrix: data.frame with column 'loc_positives' (0/1) and host columns 'host_*'
+1758830807545:counts_matrix <- read.csv("./bloodmeal_plusWNV_for_BIOL3070.csv")
+1758830807576:## 1) Identify host columns
+1758830807577:host_cols <- grep("^host_", names(counts_matrix), value = TRUE)
+1758830807579:if (length(host_cols) == 0) {
+1758830807580:stop("No columns matching '^host_' were found in counts_matrix.")
+1758830807581:}
+1758830807582:## 2) Ensure loc_positives is present and has both levels 0 and 1 where possible
+1758830807583:counts_matrix$loc_positives <- factor(counts_matrix$loc_positives, levels = c(0, 1))
+1758830807604:## 3) Aggregate host counts by loc_positives
+1758830807606:agg <- stats::aggregate(
+1758830807607:counts_matrix[, host_cols, drop = FALSE],
+1758830807608:by = list(loc_positives = counts_matrix$loc_positives),
+1758830807609:FUN = function(x) sum(as.numeric(x), na.rm = TRUE)
+1758830807610:)
+1758830807636:## make sure both rows exist; if one is missing, add a zero row
+1758830807637:need_levels <- setdiff(levels(counts_matrix$loc_positives), as.character(agg$loc_positives))
+1758830807638:if (length(need_levels)) {
+1758830807639:zero_row <- as.list(rep(0, length(host_cols)))
+1758830807640:names(zero_row) <- host_cols
+1758830807641:for (lv in need_levels) {
+1758830807642:agg <- rbind(agg, c(lv, zero_row))
+1758830807643:}
+1758830807643:## restore proper type
+1758830807645:agg$loc_positives <- factor(agg$loc_positives, levels = c("0","1"))
+1758830807646:## coerce numeric host cols (they may have become character after rbind)
+1758830807647:for (hc in host_cols) agg[[hc]] <- as.numeric(agg[[hc]])
+1758830807648:agg <- agg[order(agg$loc_positives), , drop = FALSE]
+1758830807649:}
+1758830807651:## 4) Decide species order (overall abundance, descending)
+1758830807652:overall <- colSums(agg[, host_cols, drop = FALSE], na.rm = TRUE)
+1758830807656:host_order <- names(sort(overall, decreasing = TRUE))
+1758830807659:species_labels <- rev(sub("^host_", "", host_order))  # nicer labels
+1758830807662:## 5) Build count vectors for each panel in the SAME order
+1758830807680:counts0 <- rev(as.numeric(agg[agg$loc_positives == 0, host_order, drop = TRUE]))
+1758830807685:counts1 <- rev(as.numeric(agg[agg$loc_positives == 1, host_order, drop = TRUE]))
+1758830807689:## 6) Colors: reuse your existing 'cols' if it exists and is long enough; otherwise generate
+1758830807690:if (exists("cols") && length(cols) >= length(host_order)) {
+1758830807691:species_colors <- setNames(cols[seq_along(host_order)], species_labels)
+1758830807693:} else {
+1758830807694:species_colors <- setNames(rainbow(length(host_order) + 10)[seq_along(host_order)], species_labels)
+1758830807695:}
+1758830807699:## 7) Shared x-limit for comparability
+1758830807700:xmax <- max(c(counts0, counts1), na.rm = TRUE)
+1758830807703:xmax <- if (is.finite(xmax)) xmax else 1
+1758830807704:xlim_use <- c(0, xmax * 1.08)
+1758830807708:## 8) Plot: two horizontal barplots with identical order and colors
+1758830807709:op <- par(mfrow = c(1, 2),
+1758830807710:mar = c(4, 12, 3, 2),  # big left margin for species names
+1758830807711:xaxs = "i")           # a bit tighter axis padding
+1758830807749:## Panel A: No WNV detected (loc_positives = 0)
+1758830807750:barplot(height = counts0,
+1758830807751:names.arg = species_labels,
+1758830807752:cex.names = .5,
+1758830807754:cex.axis = .5,
+1758830807755:col = rev(unname(species_colors[species_labels])),
+1758830807756:horiz = TRUE,
+1758830807757:las = 1,
+1758830807758:xlab = "Bloodmeal counts",
+1758830807760:main = "Locations WNV (-)",
+1758830807782:xlim = xlim_use)
+1758830807789:## Panel B: WNV detected (loc_positives = 1)
+1758830807791:barplot(height = counts1,
+1758830807792:names.arg = species_labels,
+1758830807793:cex.names = .5,
+1758830807794:cex.axis = .5,
+1758830807795:col = rev(unname(species_colors[species_labels])),
+1758830807795:horiz = TRUE,
+1758830807796:las = 1,
+1758830807797:xlab = "Bloodmeal counts",
+1758830807798:main = "Locations WNV (+)",
+1758830807799:xlim = xlim_use)
+1758830807803:par(op)
+1758830807804:## Keep the colors mapping for reuse elsewhere
+1758830807805:host_species_colors <- species_colors
+1758830840363:## import counts_matrix: data.frame with column 'loc_positives' (0/1) and host columns 'host_*'
+1758830840365:counts_matrix <- read.csv("./bloodmeal_plusWNV_for_BIOL3070.csv")
+1758830840398:## 1) Identify host columns
+1758830840399:host_cols <- grep("^host_", names(counts_matrix), value = TRUE)
+1758830840402:if (length(host_cols) == 0) {
+1758830840403:stop("No columns matching '^host_' were found in counts_matrix.")
+1758830840403:}
+1758830840405:## 2) Ensure loc_positives is present and has both levels 0 and 1 where possible
+1758830840405:counts_matrix$loc_positives <- factor(counts_matrix$loc_positives, levels = c(0, 1))
+1758830840452:## 3) Aggregate host counts by loc_positives
+1758830840453:agg <- stats::aggregate(
+1758830840454:counts_matrix[, host_cols, drop = FALSE],
+1758830840455:by = list(loc_positives = counts_matrix$loc_positives),
+1758830840456:FUN = function(x) sum(as.numeric(x), na.rm = TRUE)
+1758830840457:)
+1758830840488:## make sure both rows exist; if one is missing, add a zero row
+1758830840489:need_levels <- setdiff(levels(counts_matrix$loc_positives), as.character(agg$loc_positives))
+1758830840491:if (length(need_levels)) {
+1758830840492:zero_row <- as.list(rep(0, length(host_cols)))
+1758830840493:names(zero_row) <- host_cols
+1758830840494:for (lv in need_levels) {
+1758830840495:agg <- rbind(agg, c(lv, zero_row))
+1758830840496:}
+1758830840496:## restore proper type
+1758830840497:agg$loc_positives <- factor(agg$loc_positives, levels = c("0","1"))
+1758830840498:## coerce numeric host cols (they may have become character after rbind)
+1758830840499:for (hc in host_cols) agg[[hc]] <- as.numeric(agg[[hc]])
+1758830840500:agg <- agg[order(agg$loc_positives), , drop = FALSE]
+1758830840501:}
+1758830840502:## 4) Decide species order (overall abundance, descending)
+1758830840502:overall <- colSums(agg[, host_cols, drop = FALSE], na.rm = TRUE)
+1758830840505:host_order <- names(sort(overall, decreasing = TRUE))
+1758830840507:species_labels <- rev(sub("^host_", "", host_order))  # nicer labels
+1758830840509:## 5) Build count vectors for each panel in the SAME order
+1758830840510:counts0 <- rev(as.numeric(agg[agg$loc_positives == 0, host_order, drop = TRUE]))
+1758830840512:counts1 <- rev(as.numeric(agg[agg$loc_positives == 1, host_order, drop = TRUE]))
+1758830840515:## 6) Colors: reuse your existing 'cols' if it exists and is long enough; otherwise generate
+1758830840516:if (exists("cols") && length(cols) >= length(host_order)) {
+1758830840516:species_colors <- setNames(cols[seq_along(host_order)], species_labels)
+1758830840517:} else {
+1758830840518:species_colors <- setNames(rainbow(length(host_order) + 10)[seq_along(host_order)], species_labels)
+1758830840519:}
+1758830840521:## 7) Shared x-limit for comparability
+1758830840522:xmax <- max(c(counts0, counts1), na.rm = TRUE)
+1758830840524:xmax <- if (is.finite(xmax)) xmax else 1
+1758830840525:xlim_use <- c(0, xmax * 1.08)
+1758830840527:## 8) Plot: two horizontal barplots with identical order and colors
+1758830840528:op <- par(mfrow = c(1, 2),
+1758830840529:mar = c(4, 12, 3, 2),  # big left margin for species names
+1758830840530:xaxs = "i")           # a bit tighter axis padding
+1758830840534:## Panel A: No WNV detected (loc_positives = 0)
+1758830840535:barplot(height = counts0,
+1758830840535:names.arg = species_labels,
+1758830840536:cex.names = .5,
+1758830840537:cex.axis = .5,
+1758830840538:col = rev(unname(species_colors[species_labels])),
+1758830840539:horiz = TRUE,
+1758830840540:las = 1,
+1758830840541:xlab = "Bloodmeal counts",
+1758830840541:main = "Locations WNV (-)",
+1758830840542:xlim = xlim_use)
+1758830840547:## Panel B: WNV detected (loc_positives = 1)
+1758830840548:barplot(height = counts1,
+1758830840549:names.arg = species_labels,
+1758830840549:cex.names = .5,
+1758830840550:cex.axis = .5,
+1758830840551:col = rev(unname(species_colors[species_labels])),
+1758830840552:horiz = TRUE,
+1758830840580:las = 1,
+1758830840581:xlab = "Bloodmeal counts",
+1758830840582:main = "Locations WNV (+)",
+1758830840583:xlim = xlim_use)
+1758830840587:par(op)
+1758830840588:## Keep the colors mapping for reuse elsewhere
+1758830840589:host_species_colors <- species_colors
+1758830877590:knitr::opts_chunk$set(echo = TRUE)
+1758830877595:par(mar=c(5,12,2,2))  # wider left margin for names
+1758830877597:bp <- barplot(duration$mean, horiz=TRUE, names.arg=duration$Bird,
+1758830877597:las=1, col=cols, xlab="Days of detectable viremia", xlim=c(0,7))
+1758830891074:# Manually transcribe duration (mean, lo, hi) from the last table column
+1758830891076:duration <- data.frame(
+1758830891077:Bird = c("Canada Goose","Mallard",
+1758830891078:"American Kestrel","Northern Bobwhite",
+1758830891079:"Japanese Quail","Ring-necked Pheasant",
+1758830891081:"American Coot","Killdeer",
+1758830891082:"Ring-billed Gull","Mourning Dove",
+1758830891083:"Rock Dove","Monk Parakeet",
+1758830891083:"Budgerigar","Great Horned Owl",
+1758830891084:"Northern Flicker","Blue Jay",
+1758830891086:"Black-billed Magpie","American Crow",
+1758830891087:"Fish Crow","American Robin",
+1758830891088:"European Starling","Red-winged Blackbird",
+1758830891089:"Common Grackle","House Finch","House Sparrow"),
+1758830891090:mean = c(4.0,4.0,4.5,4.0,1.3,3.7,4.0,4.5,5.5,3.7,3.2,2.7,1.7,6.0,4.0,
+1758830891091:4.0,5.0,3.8,5.0,4.5,3.2,3.0,3.3,6.0,4.5),
+1758830891092:lo   = c(3,4,4,3,0,3,4,4,4,3,3,1,0,6,3,
+1758830891093:3,5,3,4,4,3,3,3,5,2),
+1758830891094:hi   = c(5,4,5,5,4,4,4,5,7,4,4,4,4,6,5,
+1758830891095:5,5,5,7,5,4,3,4,7,6)
+1758830891096:)
+1758830891103:# Choose some colors
+1758830891105:cols <- c(rainbow(30)[c(10:29,1:5)])  # rainbow colors
+1758830891107:# horizontal barplot
+1758830891108:par(mar=c(5,12,2,2))  # wider left margin for names
+1758830891111:bp <- barplot(duration$mean, horiz=TRUE, names.arg=duration$Bird,
+1758830891112:las=1, col=cols, xlab="Days of detectable viremia", xlim=c(0,7))
+1758830891119:# add error bars
+1758830891121:arrows(duration$lo, bp, duration$hi, bp,
+1758830891122:angle=90, code=3, length=0.05, col="black", xpd=TRUE)
+1759433020040:knitr::opts_chunk$set(echo = TRUE)
+1759433026282:knitr::opts_chunk$set(echo = TRUE)
+1759433038702:# Manually transcribe duration (mean, lo, hi) from the last table column
+1759433038703:duration <- data.frame(
+1759433038704:Bird = c("Canada Goose","Mallard",
+1759433038705:"American Kestrel","Northern Bobwhite",
+1759433038706:"Japanese Quail","Ring-necked Pheasant",
+1759433038706:"American Coot","Killdeer",
+1759433038707:"Ring-billed Gull","Mourning Dove",
+1759433038708:"Rock Dove","Monk Parakeet",
+1759433038709:"Budgerigar","Great Horned Owl",
+1759433038710:"Northern Flicker","Blue Jay",
+1759433038710:"Black-billed Magpie","American Crow",
+1759433038711:"Fish Crow","American Robin",
+1759433038712:"European Starling","Red-winged Blackbird",
+1759433038713:"Common Grackle","House Finch","House Sparrow"),
+1759433038713:mean = c(4.0,4.0,4.5,4.0,1.3,3.7,4.0,4.5,5.5,3.7,3.2,2.7,1.7,6.0,4.0,
+1759433038714:4.0,5.0,3.8,5.0,4.5,3.2,3.0,3.3,6.0,4.5),
+1759433038715:lo   = c(3,4,4,3,0,3,4,4,4,3,3,1,0,6,3,
+1759433038716:3,5,3,4,4,3,3,3,5,2),
+1759433038717:hi   = c(5,4,5,5,4,4,4,5,7,4,4,4,4,6,5,
+1759433038717:5,5,5,7,5,4,3,4,7,6)
+1759433038718:)
+1759433038723:# Choose some colors
+1759433038723:cols <- c(rainbow(30)[c(10:29,1:5)])  # rainbow colors
+1759433038725:# horizontal barplot
+1759433038726:par(mar=c(5,12,2,2))  # wider left margin for names
+1759433038756:bp <- barplot(duration$mean, horiz=TRUE, names.arg=duration$Bird,
+1759433038757:las=1, col=cols, xlab="Days of detectable viremia", xlim=c(0,7))
+1759433038840:# add error bars
+1759433038841:arrows(duration$lo, bp, duration$hi, bp,
+1759433038842:angle=90, code=3, length=0.05, col="black", xpd=TRUE)
+1759433058074:knitr::opts_chunk$set(echo = TRUE)
+1759433075974:knitr::opts_chunk$set(echo = TRUE)
+1761075297025:knitr::opts_chunk$set(echo = TRUE)
+1761075297181:# load data
+1761075297182:life_expectancy <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2023/2023-12-05/life_expectancy.csv')
+1761075342665:knitr::opts_chunk$set(echo = TRUE)
+1761075346664:# load data
+1761075346665:life_expectancy <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2023/2023-12-05/life_expectancy.csv')
+1761075641487:# load data
+1761075641488:life_expectancy <- readr::read_csv(life_expectancy_data)
+1761075658362:# load data
+1761075658363:life_expectancy <- read_csv(life_expectancy_data)
+1761075690252:# load data
+1761075690253:read.csv(life_expectancy_data)
+1761075848946:# load data
+1761075848947:write.csv(life_expectancy_data)
+1761075893673:# load data
+1761075893674:install.packages("readr")
+1761075901307:write.csv(life_expectancy_data)
+1761075924662:# load data
+1761075924663:write.csv(life_expectancy_data)
+1761075962950:# load data
+1761075962951:life_expectancy_data <- write.csv(life_expectancy_data)
+1761076110281:# load data
+1761076110282:life_expectancy_data <- write.csv("life_expectancy_data")
+1761076110284:read.csv(life_expectancy_data)
+1761076138341:# load data
+1761076138342:life_expectancy_data <- write.csv("life_expectancy_data")
+1761076138343:read.csv("life_expectancy_data")
+1761076138392:life_expectancy <- readr::read_csv(life_expectancy_data)
+1761076231063:# Scatterplot with line of best fit
+1761076231064:plot(life_expectancy$Year[life_expectancy$Year > 1883],life_expectancy$LifeExpectancy[life_expectancy$Year > 1883], pch = 19, col = "grey", xlab = "Year of Birth", ylab = "Life Expectancy")
+1761076258267:# load data
+1761076258268:life_expectancy <- write.csv("life_expectancy_data")
+1761076258269:read.csv("life_expectancy_data")
+1761076258305:life_expectancy <- readr::read_csv(life_expectancy_data)
+1761076263910:# Scatterplot with line of best fit
+1761076263911:plot(life_expectancy$Year[life_expectancy$Year > 1883],life_expectancy$LifeExpectancy[life_expectancy$Year > 1883], pch = 19, col = "grey", xlab = "Year of Birth", ylab = "Life Expectancy")
+1761076324262:# Scatterplot with line of best fit
+1761076324263:plot(life_expectancy$Year[life_expectancy$Year > 1883],life_expectancy$LifeExpectancy[life_expectancy$Year > 1883], pch = 19, col = "grey", xlab = "Year of Birth", ylab = "Life Expectancy", xlim = 1900)
+1761076334162:# Scatterplot with line of best fit
+1761076334163:plot(life_expectancy$Year[life_expectancy$Year > 1883],life_expectancy$LifeExpectancy[life_expectancy$Year > 1883], pch = 19, col = "grey", xlab = "Year of Birth", ylab = "Life Expectancy", xlim = 20)
+1761076346648:---
+1761076346648:title: "Linear Regression"
+1761076454195:# load data
+1761076454196:life_expectancy <- write.csv("life_expectancy_data")
+1761076454198:read.csv("life_expectancy_data")
+1761076454232:View("life_expectancy")
+1761076454234:life_expectancy <- readr::read_csv(life_expectancy_data)
+1761076465356:# load data
+1761076465357:life_expectancy <- write.csv("life_expectancy_data")
+1761076465359:read.csv("life_expectancy_data")
+1761076465397:View("life_expectancy_data")
+1761076465451:life_expectancy <- readr::read_csv(life_expectancy_data)
+1761076503966:# load data
+1761076503974:life_expectancy <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2023/2023-12-05/life_expectancy.csv')
+1761076504295:life_expectancy <- write.csv("life_expectancy_data")
+1761076504297:read.csv("life_expectancy_data")
+1761076504328:View("life_expectancy_data")
+1761076504329:life_expectancy <- readr::read_csv(life_expectancy_data)
+1761076524677:# load data
+1761076524678:life_expectancy <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2023/2023-12-05/life_expectancy.csv')
+1761076524884:View(life_expectancy)
+1761076533479:# Scatterplot with line of best fit
+1761076533480:plot(life_expectancy$Year[life_expectancy$Year > 1883],life_expectancy$LifeExpectancy[life_expectancy$Year > 1883], pch = 19, col = "grey", xlab = "Year of Birth", ylab = "Life Expectancy", xlim = 20)
+1761076540142:# Scatterplot with line of best fit
+1761076540143:plot(life_expectancy$Year[life_expectancy$Year > 1883],life_expectancy$LifeExpectancy[life_expectancy$Year > 1883], pch = 19, col = "grey", xlab = "Year of Birth", ylab = "Life Expectancy")
+1761076540618:abline(lm(LifeExpectancy ~ Year, data = life_expectancy[life_expectancy$Year > 1883,]), lt = 1)
+1761076558119:# Linear regression years before 1883 (Koch's germ theory)
+1761076558120:lm_b1883 <- lm(LifeExpectancy ~ Year, data = life_expectancy[life_expectancy$Year < 1883,])
+1761076558147:summary(lm_b1883)
+1761076558159:# Linear regression years after 1883 (Koch's germ theory)
+1761076558160:lm_a1883 <- lm(LifeExpectancy ~ Year, data = life_expectancy[life_expectancy$Year > 1883,])
+1761076558379:summary(lm_a1883)
+1761076612769:plot(life_expectancy$Year,life_expectancy$LifeExpectancy, pch = 19, col = "grey", xlab = "Year of Birth", ylab = "Life Expectancy")
+1761076613193:abline(lm_b1883, lt = 3)
+1761076613195:abline(lm_a1883, lt = 1)
+1761681294057:knitr::opts_chunk$set(echo = TRUE)
+1761681294198:barplot(5, 4)
+1761681536579:age <- data.frame(category = c("0-4", "5-11", "12-17", "18-24", "25-34", "35-64", "65+"), value = c(1.4, 2.4, 2.0, 3.8, 6.4, 11.5, 27.1))
+1761681536612:ggplot(age, aes(x = category, y = value)) +
+1761681536613:geom_bar(stat = "identity", fill = "lightgreen") + # stat="identity" uses y-values directly
+1761681536614:labs(
+1761681536615:title = "Values by Category",
+1761681536616:x = "Category",
+1761681536616:y = "Value"
+1761681536617:)
+1761681543271:age <- data.frame(category = c("0-4", "5-11", "12-17", "18-24", "25-34", "35-64", "65+"), value = c(1.4, 2.4, 2.0, 3.8, 6.4, 11.5, 27.1))
+1761681543277:plot(age, aes(x = category, y = value)) +
+1761681543278:geom_bar(stat = "identity", fill = "lightgreen") + # stat="identity" uses y-values directly
+1761681543279:labs(
+1761681543280:title = "Values by Category",
+1761681543281:x = "Category",
+1761681543282:y = "Value"
+1761681543282:)
+1761681596476:library(ggplot2)
+1761681596880:age <- data.frame(category = c("0-4", "5-11", "12-17", "18-24", "25-34", "35-64", "65+"), value = c(1.4, 2.4, 2.0, 3.8, 6.4, 11.5, 27.1))
+1761681596883:ggplot(age, aes(x = category, y = value)) +
+1761681596884:geom_bar(stat = "identity", fill = "lightgreen") + # stat="identity" uses y-values directly
+1761681596884:labs(
+1761681596885:title = "Values by Category",
+1761681596886:x = "Category",
+1761681596886:y = "Value"
+1761681596887:)
+1761681597151:barplot(5, 4)
+1761681606282:library(ggplot2)
+1761681606283:age <- data.frame(category = c("0-4", "5-11", "12-17", "18-24", "25-34", "35-64", "65+"), value = c(1.4, 2.4, 2.0, 3.8, 6.4, 11.5, 27.1))
+1761681606287:ggplot(age, aes(x = category, y = value)) +
+1761681606287:geom_bar(stat = "identity", fill = "lightgreen") + # stat="identity" uses y-values directly
+1761681606288:labs(
+1761681606289:title = "Values by Category",
+1761681606290:x = "Category",
+1761681606290:y = "Value"
+1761681606291:)
+1761681799253:library(ggplot2)
+1761681799254:age <- data.frame(category = c("0-4", "5-11", "12-17", "18-24", "25-34", "35-64", "65+"), value = c(1.4, 2.4, 2.0, 3.8, 6.4, 11.5, 27.1))
+1761681799258:ggplot(age, aes(x = category, y = value)) +
+1761681799259:geom_bar(stat = "identity", fill = "darkred") + # stat="identity" uses y-values directly
+1761681799260:labs(title = "Asthma Deaths By Age",x = "Age (Years)",y = "Asthma-Related Deaths Per Million")
+1761681855442:library(ggplot2)
+1761681855472:age <- data.frame(category = c("0-4", "five-11", "12-17", "18-24", "25-34", "35-64", "65+"), value = c(1.4, 2.4, 2.0, 3.8, 6.4, 11.5, 27.1))
+1761681855476:ggplot(age, aes(x = category, y = value)) +
+1761681855477:geom_bar(stat = "identity", fill = "darkred") + # stat="identity" uses y-values directly
+1761681855478:labs(title = "Asthma Deaths By Age",x = "Age (Years)",y = "Asthma-Related Deaths Per Million")
+1761681870569:library(ggplot2)
+1761681870621:age <- data.frame(category = c("0-4", "05-11", "12-17", "18-24", "25-34", "35-64", "65+"), value = c(1.4, 2.4, 2.0, 3.8, 6.4, 11.5, 27.1))
+1761681870626:ggplot(age, aes(x = category, y = value)) +
+1761681870627:geom_bar(stat = "identity", fill = "darkred") + # stat="identity" uses y-values directly
+1761681870628:labs(title = "Asthma Deaths By Age",x = "Age (Years)",y = "Asthma-Related Deaths Per Million")
+1761681914279:library(ggplot2)
+1761681914281:age <- data.frame(category = c("0-04", "5-11", " 12-17", "18-24", "25-34", "35-64", "65+"), value = c(1.4, 2.4, 2.0, 3.8, 6.4, 11.5, 27.1))
+1761681914285:ggplot(age, aes(x = category, y = value)) +
+1761681914286:geom_bar(stat = "identity", fill = "darkred") + # stat="identity" uses y-values directly
+1761681914287:labs(title = "Asthma Deaths By Age",x = "Age (Years)",y = "Asthma-Related Deaths Per Million")
+1761681934403:library(ggplot2)
+1761681934442:age <- data.frame(category = c(" 0-4", " 5-11", "12-17", "18-24", "25-34", "35-64", "65+"), value = c(1.4, 2.4, 2.0, 3.8, 6.4, 11.5, 27.1))
+1761681934476:ggplot(age, aes(x = category, y = value)) +
+1761681934477:geom_bar(stat = "identity", fill = "darkred") + # stat="identity" uses y-values directly
+1761681934478:labs(title = "Asthma Deaths By Age",x = "Age (Years)",y = "Asthma-Related Deaths Per Million")
+1762995187190:knitr::opts_chunk$set(echo = TRUE)
+1762995187322:library(ggplot2)
+1762995187324:age <- data.frame(
+1762995187325:category = c("0-4", "5-11", "12-17", "18-24", "25-34", "35-64", "65+"),
+1762995187326:value = c(1.4, 2.4, 2.0, 3.8, 6.4, 11.5, 27.1)
+1762995187326:)
+1762995187342:ggplot(age, aes(x = category, y = value)) +
+1762995187342:geom_bar(stat = "identity", fill = "darkred") +
+1762995187343:labs(
+1762995187344:title = "Asthma Deaths By Age",
+1762995187345:x = "Age (Years)",
+1762995187345:y = "Asthma-Related Deaths Per Million"
+1762995187346:) +
+1762995187347:scale_y_continuous(
+1762995187348:breaks = seq(0, 30, by = 2),  # show numbers every 2 units
+1762995187348:minor_breaks = seq(0, 30, by = 1)  # add smaller grid lines between major ones
+1762995187349:) +
+1762995187350:theme_minimal()  # optional: cleaner background to see grid lines
+1762995247646:library(ggplot2)
+1762995247674:age <- data.frame(
+1762995247675:category = c("0-4", "5-11", "12-17", "18-24", "25-34", "35-64", "65+"),
+1762995247675:value = c(1.4, 2.4, 2.0, 3.8, 6.4, 11.5, 27.1)
+1762995247676:)
+1762995247680:ggplot(age, aes(x = category, y = value)) +
+1762995247681:geom_bar(stat = "identity", fill = "darkred") +
+1762995247682:labs(
+1762995247683:title = "Asthma Deaths By Age",
+1762995247683:x = "Age (Years)",
+1762995247684:y = "Asthma-Related Deaths Per Million"
+1762995247685:) +
+1762995247686:scale_y_continuous(
+1762995247686:breaks = seq(0, 30, by = 2),  # show numbers every 2 units
+1762995247687:minor_breaks = seq(0, 30, by = 1)  # add smaller grid lines between major ones
+1762995247688:)
+1762995275499:library(ggplot2)
+1762995275500:age <- data.frame(
+1762995275501:category = c(" 0-4", "5-11", "12-17", "18-24", "25-34", "35-64", "65+"),
+1762995275501:value = c(1.4, 2.4, 2.0, 3.8, 6.4, 11.5, 27.1)
+1762995275502:)
+1762995275506:ggplot(age, aes(x = category, y = value)) +
+1762995275506:geom_bar(stat = "identity", fill = "darkred") +
+1762995275507:labs(
+1762995275508:title = "Asthma Deaths By Age",
+1762995275508:x = "Age (Years)",
+1762995275509:y = "Asthma-Related Deaths Per Million"
+1762995275510:) +
+1762995275510:scale_y_continuous(
+1762995275511:breaks = seq(0, 30, by = 2),  # show numbers every 2 units
+1762995275512:minor_breaks = seq(0, 30, by = 1)  # add smaller grid lines between major ones
+1762995275512:)
+1762995283555:library(ggplot2)
+1762995283557:age <- data.frame(
+1762995283557:category = c(" 0-4", " 5-11", "12-17", "18-24", "25-34", "35-64", "65+"),
+1762995283558:value = c(1.4, 2.4, 2.0, 3.8, 6.4, 11.5, 27.1)
+1762995283559:)
+1762995283562:ggplot(age, aes(x = category, y = value)) +
+1762995283563:geom_bar(stat = "identity", fill = "darkred") +
+1762995283564:labs(
+1762995283565:title = "Asthma Deaths By Age",
+1762995283565:x = "Age (Years)",
+1762995283566:y = "Asthma-Related Deaths Per Million"
+1762995283567:) +
+1762995283567:scale_y_continuous(
+1762995283568:breaks = seq(0, 30, by = 2),  # show numbers every 2 units
+1762995283569:minor_breaks = seq(0, 30, by = 1)  # add smaller grid lines between major ones
+1762995283569:)
+1762995325052:library(ggplot2)
+1762995325053:age <- data.frame(
+1762995325054:category = c(" 0-4", " 5-11", "12-17", "18-24", "25-34", "35-64", "65+"),
+1762995325055:value = c(1.4, 2.4, 2.0, 3.8, 6.4, 11.5, 27.1)
+1762995325055:)
+1762995325059:ggplot(age, aes(x = category, y = value)) +
+1762995325060:geom_bar(stat = "identity", fill = "darkred") +
+1762995325060:labs(
+1762995325061:title = "Asthma Deaths By Age Group",
+1762995325062:x = "Age (Years)",
+1762995325063:y = "Asthma-Related Deaths Per Million"
+1762995325063:) +
+1762995325064:scale_y_continuous(
+1762995325065:breaks = seq(0, 30, by = 2),  # show numbers every 2 units
+1762995325066:minor_breaks = seq(0, 30, by = 1)  # add smaller grid lines between major ones
+1762995325066:)
+1762995350010:library(ggplot2)
+1762995350038:age <- data.frame(
+1762995350039:category = c(" 0-4", " 5-11", "12-17", "18-24", "25-34", "35-64", "65+"),
+1762995350039:value = c(1.4, 2.4, 2.0, 3.8, 6.4, 11.5, 27.1)
+1762995350040:)
+1762995350044:ggplot(age, aes(x = category, y = value)) +
+1762995350044:geom_bar(stat = "identity", fill = "darkred") +
+1762995350045:labs(
+1762995350046:title = "Asthma Deaths By Age Group",
+1762995350047:x = "Age (Years)",
+1762995350047:y = "Asthma-Related Deaths Per Million"
+1762995350048:) +
+1762995350049:scale_y_continuous(
+1762995350050:breaks = seq(0, 30, by = 2),  # show numbers every 2 units
+1762995350050:minor_breaks = seq(0, 30, by = 1)  # add smaller grid lines between major ones
+1762995350051:) + theme(Barbie)
+1762995360069:library(ggplot2)
+1762995360071:age <- data.frame(
+1762995360072:category = c(" 0-4", " 5-11", "12-17", "18-24", "25-34", "35-64", "65+"),
+1762995360073:value = c(1.4, 2.4, 2.0, 3.8, 6.4, 11.5, 27.1)
+1762995360074:)
+1762995360079:ggplot(age, aes(x = category, y = value)) +
+1762995360080:geom_bar(stat = "identity", fill = "darkred") +
+1762995360081:labs(
+1762995360081:title = "Asthma Deaths By Age Group",
+1762995360082:x = "Age (Years)",
+1762995360083:y = "Asthma-Related Deaths Per Million"
+1762995360084:) +
+1762995360085:scale_y_continuous(
+1762995360086:breaks = seq(0, 30, by = 2),  # show numbers every 2 units
+1762995360087:minor_breaks = seq(0, 30, by = 1)  # add smaller grid lines between major ones
+1762995360088:)
+1762995584855:library(ggplot2)
+1762995584857:age <- data.frame(
+1762995584858:category = c(" 0-4", " 5-11", "12-17", "18-24", "25-34", "35-64", "65+"),
+1762995584858:value = c(1.4, 2.4, 2.0, 3.8, 6.4, 11.5, 27.1)
+1762995584859:)
+1762995584863:ggplot(age, aes(x = category, y = value)) +
+1762995584864:geom_bar(stat = "identity", fill = "darkred") +
+1762995584865:labs(
+1762995584865:title = "Asthma Deaths By Age Group",
+1762995584866:x = "Age (Years)",
+1762995584867:y = "Asthma-Related Deaths Per Million",
+1762995584867:caption = "**Figure 1.** Asthma-related deaths occurring by age group per million as reported by the CDC in 2021"
+1762995584868:) +
+1762995584869:scale_y_continuous(
+1762995584870:breaks = seq(0, 30, by = 2),  # show numbers every 2 units
+1762995584870:minor_breaks = seq(0, 30, by = 1)  # add smaller grid lines between major ones
+1762995584871:)
+1762995605294:library(ggplot2)
+1762995605295:age <- data.frame(
+1762995605296:category = c(" 0-4", " 5-11", "12-17", "18-24", "25-34", "35-64", "65+"),
+1762995605297:value = c(1.4, 2.4, 2.0, 3.8, 6.4, 11.5, 27.1)
+1762995605298:)
+1762995605301:ggplot(age, aes(x = category, y = value)) +
+1762995605302:geom_bar(stat = "identity", fill = "darkred") +
+1762995605303:labs(
+1762995605303:title = "Asthma Deaths By Age Group",
+1762995605304:x = "Age (Years)",
+1762995605305:y = "Asthma-Related Deaths Per Million",
+1762995605306:caption = **Figure 1.** "Asthma-related deaths occurring by age group per million as reported by the CDC in 2021"
+1762995617698:library(ggplot2)
+1762995617699:age <- data.frame(
+1762995617700:category = c(" 0-4", " 5-11", "12-17", "18-24", "25-34", "35-64", "65+"),
+1762995617701:value = c(1.4, 2.4, 2.0, 3.8, 6.4, 11.5, 27.1)
+1762995617702:)
+1762995617706:ggplot(age, aes(x = category, y = value)) +
+1762995617706:geom_bar(stat = "identity", fill = "darkred") +
+1762995617707:labs(
+1762995617708:title = "Asthma Deaths By Age Group",
+1762995617708:x = "Age (Years)",
+1762995617709:y = "Asthma-Related Deaths Per Million",
+1762995617710:caption = "Figure 1. Asthma-related deaths occurring by age group per million as reported by the CDC in 2021"
+1762995617711:) +
+1762995617711:scale_y_continuous(
+1762995617712:breaks = seq(0, 30, by = 2),  # show numbers every 2 units
+1762995617713:minor_breaks = seq(0, 30, by = 1)  # add smaller grid lines between major ones
+1762995617713:)
+1762995652501:library(ggplot2)
+1762995652502:age <- data.frame(
+1762995652503:category = c(" 0-4", " 5-11", "12-17", "18-24", "25-34", "35-64", "65+"),
+1762995652504:value = c(1.4, 2.4, 2.0, 3.8, 6.4, 11.5, 27.1)
+1762995652505:)
+1762995652508:ggplot(age, aes(x = category, y = value)) +
+1762995652509:geom_bar(stat = "identity", fill = "darkred") +
+1762995652510:labs(
+1762995652511:title = "Asthma Deaths By Age Group",
+1762995652511:x = "Age (Years)",
+1762995652512:y = "Asthma-Related Deaths Per Million",
+1762995652513:caption = "Figure 1. Asthma-related deaths in 2021 occurring by age group per million as reported by the CDC"
+1762995652514:) +
+1762995652515:scale_y_continuous(
+1762995652516:breaks = seq(0, 30, by = 2),  # show numbers every 2 units
+1762995652516:minor_breaks = seq(0, 30, by = 1)  # add smaller grid lines between major ones
+1762995652517:)

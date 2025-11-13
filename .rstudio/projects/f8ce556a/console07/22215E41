@@ -1,0 +1,37 @@
+]0;/cloud/project/cloud/project$ [K/cloud/project$ git add.[K .
+]0;/cloud/project/cloud/project$ git commit -m "updated report with knitted .md file"
+[main 5846a81] updated report with knitted .md file
+ 4 files changed, 20937 insertions(+)
+ create mode 100644 FinalRMarkdownProject.Rmd
+ create mode 100644 FinalRMarkdownProject.md
+ create mode 100644 FinalRMarkdownProject_files/figure-gfm/age and deaths-1.png
+ create mode 100644 life_expectancy_data
+]0;/cloud/project/cloud/project$ git push origin main --force
+Username for 'https://github.com': a02338629
+Password for 'https://a02338629@github.com': 
+Enumerating objects: 9, done.
+Counting objects:  11% (1/9)Counting objects:  22% (2/9)Counting objects:  33% (3/9)Counting objects:  44% (4/9)Counting objects:  55% (5/9)Counting objects:  66% (6/9)Counting objects:  77% (7/9)Counting objects:  88% (8/9)Counting objects: 100% (9/9)Counting objects: 100% (9/9), done.
+Delta compression using up to 16 threads
+Compressing objects:  16% (1/6)Compressing objects:  33% (2/6)Compressing objects:  50% (3/6)Compressing objects:  66% (4/6)Compressing objects:  83% (5/6)Compressing objects: 100% (6/6)Compressing objects: 100% (6/6), done.
+Writing objects:  12% (1/8)Writing objects:  25% (2/8)Writing objects:  37% (3/8)Writing objects:  50% (4/8)Writing objects:  62% (5/8)Writing objects:  75% (6/8)Writing objects:  87% (7/8)Writing objects: 100% (8/8)Writing objects: 100% (8/8), 139.92 KiB | 7.36 MiB/s, done.
+Total 8 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas:   0% (0/2)[Kremote: Resolving deltas:  50% (1/2)[Kremote: Resolving deltas: 100% (2/2)[Kremote: Resolving deltas: 100% (2/2), completed with 1 local object.[K
+To https://github.com/a02338629-code/BIOL3070-Shumway
+   010027e..5846a81  main -> main
+]0;/cloud/project/cloud/project$ git add .
+]0;/cloud/project/cloud/project$ git pu[K[Kcommit -m "HOMEWORK 10 Report with Knitted File"F[K
+[main 9ea9415] HOMEWORK 10 Report with Knitted File
+ 2 files changed, 21 insertions(+), 23 deletions(-)
+]0;/cloud/project/cloud/project$ f[Kgit push origin main --force
+Username for 'https://github.com': a02338629
+Password for 'https://a02338629@github.com': 
+Enumerating objects: 7, done.
+Counting objects:  14% (1/7)Counting objects:  28% (2/7)Counting objects:  42% (3/7)Counting objects:  57% (4/7)Counting objects:  71% (5/7)Counting objects:  85% (6/7)Counting objects: 100% (7/7)Counting objects: 100% (7/7), done.
+Delta compression using up to 16 threads
+Compressing objects:  25% (1/4)Compressing objects:  50% (2/4)Compressing objects:  75% (3/4)Compressing objects: 100% (4/4)Compressing objects: 100% (4/4), done.
+Writing objects:  25% (1/4)Writing objects:  50% (2/4)Writing objects:  75% (3/4)Writing objects: 100% (4/4)Writing objects: 100% (4/4), 407 bytes | 407.00 KiB/s, done.
+Total 4 (delta 3), reused 0 (delta 0)
+remote: Resolving deltas:   0% (0/3)[Kremote: Resolving deltas:  33% (1/3)[Kremote: Resolving deltas:  66% (2/3)[Kremote: Resolving deltas: 100% (3/3)[Kremote: Resolving deltas: 100% (3/3), completed with 3 local objects.[K
+To https://github.com/a02338629-code/BIOL3070-Shumway
+   5846a81..9ea9415  main -> main
+]0;/cloud/project/cloud/project$ 

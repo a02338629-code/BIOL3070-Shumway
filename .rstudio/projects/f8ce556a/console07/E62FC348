@@ -1,0 +1,49 @@
+]0;/cloud/project/cloud/project$ [K/cloud/project$ 
+]0;/cloud/project/cloud/project$ 
+]0;/cloud/project/cloud/project$ FinalRMArk[K[K[K[KMarkdownProject.Rmd
+bash: FinalRMarkdownProject.Rmd: command not found
+]0;/cloud/project/cloud/project$ git add.
+git: 'add.' is not a git command. See 'git --help'.
+
+The most similar command is
+	add
+]0;/cloud/project/cloud/project$ 
+]0;/cloud/project/cloud/project$ 
+]0;/cloud/project/cloud/project$ git add.[Kgit add.FinalRMarkdownProject.Rmd[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cgit push origin main --force[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccommit -m "final project"[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1Ppush origin main --force[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccommit -m "final project"[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1Ppush origin main --force[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccommit -m "final project"[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cadd .[Kpush origin main --force[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cadd .[Kcommit -m "final project"[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1Ppush origin main --force[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[3PFinalRMarkdownProject.Rmd[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cgit add.[K[Kcd
+]0;~~$ 
+]0;~~$ final
+bash: final: command not found
+git add .
+fatal: not a git repository (or any parent up to mount point /)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+]0;~~$ git add .
+fatal: not a git repository (or any parent up to mount point /)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+]0;~~$ ogit commit -m “updated knitted mini-report”=[K[K[Kt"[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kreport for Homework 12"
+> ^C
+]0;~~$ ogit push origin main --force[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kgit push origin main --force
+fatal: not a git repository (or any parent up to mount point /)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+]0;~~$ git add .
+fatal: not a git repository (or any parent up to mount point /)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+]0;~~$ git [K[K[K[Kgit add .
+fatal: not a git repository (or any parent up to mount point /)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+]0;~~$ pwd
+/home/r1119511
+]0;~~$ 
+]0;~~$ ls -a
+.  ..  .config	.gitconfig  .rsconnect-python  .rstudio  .sh_history  .subversion  R
+]0;~~$ 
+]0;~~$ cd ~/Documents/my-project
+bash: cd: /home/r1119511/Documents/my-project: No such file or directory
+]0;~~$ git add .
+fatal: not a git repository (or any parent up to mount point /)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+]0;~~$ git init
+Initialized empty Git repository in /cloud/home/r1119511/.git/
+]0;~~$ git remote add origin https://github.com/yourusername/yourrepo.git
+]0;~~$ git remote add origin https://github.com/a02338629-code/main.git
+fatal: remote origin already exists.
+]0;~~$ git add .
