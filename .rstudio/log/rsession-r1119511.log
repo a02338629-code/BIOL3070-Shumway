@@ -460,3 +460,53 @@
 2025-11-13T03:13:49.424218Z [rsession-r1119511] INFO No keybindings/rstudio_bindings.json found at /etc/rstudio/keybindings/rstudio_bindings.json
 2025-11-13T03:13:51.515231Z [rsession-r1119511] ERROR system error 84 (Invalid or incomplete multibyte or wide character) [str: individual’s, len: 14, from: UTF-8, to: ISO8859-1]; OCCURRED AT rstudio::core::Error rstudio::r::util::{anonymous}::iconvstrImpl(const string&, const string&, const string&, bool, std::string*) src/cpp/r/RUtil.cpp:268; LOGGED FROM: rstudio::core::Error rstudio::session::modules::spelling::{anonymous}::checkSpelling(const rstudio::core::json::JsonRpcRequest&, rstudio::core::json::JsonRpcResponse*) src/cpp/session/modules/SessionSpelling.cpp:225
 2025-11-13T03:44:32.842036Z [rsession-r1119511] WARNING PrivateCommand timeout; LOGGED FROM: bool rstudio::core::terminal::PrivateCommand::onTryCapture(rstudio::core::system::ProcessOperations&, bool) src/cpp/core/terminal/PrivateCommand.cpp:109
+2025-11-13T03:56:42.472394Z [rsession-r1119511] INFO No keybindings/addins.json found at /etc/rstudio/keybindings/addins.json
+2025-11-13T03:56:42.472840Z [rsession-r1119511] INFO No keybindings/editor_bindings.json found at /etc/rstudio/keybindings/editor_bindings.json
+2025-11-13T03:56:42.473213Z [rsession-r1119511] INFO No keybindings/rstudio_bindings.json found at /etc/rstudio/keybindings/rstudio_bindings.json
+2025-11-13T03:59:32.717781Z [rsession-r1119511] INFO No keybindings/addins.json found at /etc/rstudio/keybindings/addins.json
+2025-11-13T04:32:31.867011Z [rsession-r1119511] INFO Lowered CPU priority during suspend
+2025-11-13T04:32:32.918558Z [rsession-r1119511] ERROR system error 2 (No such file or directory) [path: /proc/1834/cwd]; OCCURRED AT rstudio::core::FilePath rstudio::core::FilePath::resolveSymlink() const src/cpp/shared_core/FilePath.cpp:1666; LOGGED FROM: rstudio::core::FilePath rstudio::core::FilePath::resolveSymlink() const src/cpp/shared_core/FilePath.cpp:1666
+2025-11-13T04:43:28.313682Z [rsession-r1119511] INFO Reading rsession configuration from '/etc/rstudio/rsession.conf'
+2025-11-13T04:43:28.413470Z [rsession-r1119511] INFO Encryption versions set to max: 0, min: 0
+2025-11-13T04:43:30.622000Z [rsession-r1119511] INFO Set CRAN URL for session to 'https://packagemanager.posit.co/cran/__linux__/focal/latest' (source: preference defaults)
+2025-11-13T04:43:34.390568Z [rsession-r1119511] INFO Databricks pane requires user-provided DATABRICKS_HOST and DATABRICKS_TOKEN
+2025-11-13T04:43:34.394493Z [rsession-r1119511] INFO Detected existing system-wide Git configuration, skipping
+2025-11-13T04:43:41.413399Z [rsession-r1119511] INFO No admin notifications found at /etc/rstudio/notifications.conf
+2025-11-13T04:43:42.483278Z [rsession-r1119511] INFO No keybindings/addins.json found at /etc/rstudio/keybindings/addins.json
+2025-11-13T04:43:42.483768Z [rsession-r1119511] INFO No keybindings/editor_bindings.json found at /etc/rstudio/keybindings/editor_bindings.json
+2025-11-13T04:43:42.484217Z [rsession-r1119511] INFO No keybindings/rstudio_bindings.json found at /etc/rstudio/keybindings/rstudio_bindings.json
+2025-11-13T04:59:32.234992Z [rsession-r1119511] INFO Lowered CPU priority during suspend
+2025-11-13T17:24:42.623210Z [rsession-r1119511] INFO Reading rsession configuration from '/etc/rstudio/rsession.conf'
+2025-11-13T17:24:42.723003Z [rsession-r1119511] INFO Encryption versions set to max: 0, min: 0
+2025-11-13T17:24:43.137041Z [rsession-r1119511] INFO Set CRAN URL for session to 'https://packagemanager.posit.co/cran/__linux__/focal/latest' (source: preference defaults)
+2025-11-13T17:24:46.606422Z [rsession-r1119511] INFO Databricks pane requires user-provided DATABRICKS_HOST and DATABRICKS_TOKEN
+2025-11-13T17:24:46.611564Z [rsession-r1119511] INFO Detected existing system-wide Git configuration, skipping
+2025-11-13T17:24:52.678270Z [rsession-r1119511] INFO No admin notifications found at /etc/rstudio/notifications.conf
+2025-11-13T17:24:53.638327Z [rsession-r1119511] INFO No keybindings/editor_bindings.json found at /etc/rstudio/keybindings/editor_bindings.json
+2025-11-13T17:24:53.639758Z [rsession-r1119511] INFO No keybindings/rstudio_bindings.json found at /etc/rstudio/keybindings/rstudio_bindings.json
+2025-11-13T17:24:53.640253Z [rsession-r1119511] INFO No keybindings/addins.json found at /etc/rstudio/keybindings/addins.json
+2025-11-13T17:40:59.417121Z [rsession-r1119511] INFO Lowered CPU priority during suspend
+2025-11-14T02:23:49.741217Z [rsession-r1119511] INFO Reading rsession configuration from '/etc/rstudio/rsession.conf'
+2025-11-14T02:23:49.745444Z [rsession-r1119511] INFO Encryption versions set to max: 0, min: 0
+2025-11-14T02:23:49.983379Z [rsession-r1119511] INFO Set CRAN URL for session to 'https://packagemanager.posit.co/cran/__linux__/focal/latest' (source: preference defaults)
+2025-11-14T02:23:53.971026Z [rsession-r1119511] INFO Databricks pane requires user-provided DATABRICKS_HOST and DATABRICKS_TOKEN
+2025-11-14T02:23:53.974093Z [rsession-r1119511] INFO Detected existing system-wide Git configuration, skipping
+2025-11-14T02:24:00.205050Z [rsession-r1119511] INFO No admin notifications found at /etc/rstudio/notifications.conf
+2025-11-14T02:24:01.257106Z [rsession-r1119511] INFO No keybindings/addins.json found at /etc/rstudio/keybindings/addins.json
+2025-11-14T02:24:01.257442Z [rsession-r1119511] INFO No keybindings/editor_bindings.json found at /etc/rstudio/keybindings/editor_bindings.json
+2025-11-14T02:24:01.257858Z [rsession-r1119511] INFO No keybindings/rstudio_bindings.json found at /etc/rstudio/keybindings/rstudio_bindings.json
+2025-11-14T02:26:22.636295Z [rsession-r1119511] INFO No keybindings/addins.json found at /etc/rstudio/keybindings/addins.json
+2025-11-14T02:26:22.641823Z [rsession-r1119511] INFO No keybindings/editor_bindings.json found at /etc/rstudio/keybindings/editor_bindings.json
+2025-11-14T02:26:22.664033Z [rsession-r1119511] INFO No keybindings/rstudio_bindings.json found at /etc/rstudio/keybindings/rstudio_bindings.json
+2025-11-14T02:26:22.857259Z [rsession-r1119511] ERROR system error 84 (Invalid or incomplete multibyte or wide character) [str: individual’s, len: 14, from: UTF-8, to: ISO8859-1]; OCCURRED AT rstudio::core::Error rstudio::r::util::{anonymous}::iconvstrImpl(const string&, const string&, const string&, bool, std::string*) src/cpp/r/RUtil.cpp:268; LOGGED FROM: rstudio::core::Error rstudio::session::modules::spelling::{anonymous}::checkSpelling(const rstudio::core::json::JsonRpcRequest&, rstudio::core::json::JsonRpcResponse*) src/cpp/session/modules/SessionSpelling.cpp:225
+2025-11-14T02:31:03.563321Z [rsession-r1119511] INFO No keybindings/addins.json found at /etc/rstudio/keybindings/addins.json
+2025-11-14T02:46:15.254528Z [rsession-r1119511] INFO Lowered CPU priority during suspend
+2025-11-18T20:43:26.522573Z [rsession-r1119511] INFO Reading rsession configuration from '/etc/rstudio/rsession.conf'
+2025-11-18T20:43:26.613329Z [rsession-r1119511] INFO Encryption versions set to max: 0, min: 0
+2025-11-18T20:43:26.985528Z [rsession-r1119511] INFO Set CRAN URL for session to 'https://packagemanager.posit.co/cran/__linux__/focal/latest' (source: preference defaults)
+2025-11-18T20:43:30.947467Z [rsession-r1119511] INFO Databricks pane requires user-provided DATABRICKS_HOST and DATABRICKS_TOKEN
+2025-11-18T20:43:30.951833Z [rsession-r1119511] INFO Detected existing system-wide Git configuration, skipping
+2025-11-18T20:43:37.608554Z [rsession-r1119511] INFO No admin notifications found at /etc/rstudio/notifications.conf
+2025-11-18T20:43:38.422838Z [rsession-r1119511] INFO No keybindings/addins.json found at /etc/rstudio/keybindings/addins.json
+2025-11-18T20:43:38.423260Z [rsession-r1119511] INFO No keybindings/rstudio_bindings.json found at /etc/rstudio/keybindings/rstudio_bindings.json
+2025-11-18T20:43:38.423617Z [rsession-r1119511] INFO No keybindings/editor_bindings.json found at /etc/rstudio/keybindings/editor_bindings.json
