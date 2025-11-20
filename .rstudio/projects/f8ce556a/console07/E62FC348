@@ -273,3 +273,39 @@ To https://github.com/a02338629-code/BIOL3070-Shumway.git
 pwd
 /home/r1119511
 [Kt add .
+]0;~~$ git commit -m "test"
+[master 4218067] test
+ 16 files changed, 122 insertions(+), 20 deletions(-)
+ rewrite .rstudio/projects/f8ce556a/console07/INDEX001 (84%)
+]0;~~$ git push origin main --force
+error: src refspec main does not match any
+[31merror: failed to push some refs to 'https://github.com/a02338629-code/BIOL3070-Shumway.git'
+[m]0;~~$ git push origin main [K[K[K[Kaster --forece[K[K[Kce
+fatal: unable to access 'https://github.com/a02338629-code/BIOL3070-Shumway.git/': Error in the HTTP2 framing layer
+git remote set-url origin https://github.com/[yourGitHubusername]/BIOL3070-[yourlastname]
+]0;~~$ git remote set-url origin https://github.com/a02338629-code/BIOL#)&)[K[K[K[K[KL3070-Shumway
+]0;~~$ git push -u origin main --force
+error: src refspec main does not match any
+[31merror: failed to push some refs to 'https://github.com/a02338629-code/BIOL3070-Shumway'
+[m]0;~~$ git push -u origin m[Kmaster --force
+Username for 'https://github.com': a02338629-code
+Password for 'https://a02338629-code@github.com': 
+Enumerating objects: 59, done.
+Counting objects:   1% (1/59)Counting objects:   3% (2/59)Counting objects:   5% (3/59)Counting objects:   6% (4/59)Counting objects:   8% (5/59)Counting objects:  10% (6/59)Counting objects:  11% (7/59)Counting objects:  13% (8/59)Counting objects:  15% (9/59)Counting objects:  16% (10/59)Counting objects:  18% (11/59)Counting objects:  20% (12/59)Counting objects:  22% (13/59)Counting objects:  23% (14/59)Counting objects:  25% (15/59)Counting objects:  27% (16/59)Counting objects:  28% (17/59)Counting objects:  30% (18/59)Counting objects:  32% (19/59)Counting objects:  33% (20/59)Counting objects:  35% (21/59)Counting objects:  37% (22/59)Counting objects:  38% (23/59)Counting objects:  40% (24/59)Counting objects:  42% (25/59)Counting objects:  44% (26/59)Counting objects:  45% (27/59)Counting objects:  47% (28/59)Counting objects:  49% (29/59)Counting objects:  50% (30/59)Counting objects:  52% (31/59)Counting objects:  54% (32/59)Counting objects:  55% (33/59)Counting objects:  57% (34/59)Counting objects:  59% (35/59)Counting objects:  61% (36/59)Counting objects:  62% (37/59)Counting objects:  64% (38/59)Counting objects:  66% (39/59)Counting objects:  67% (40/59)Counting objects:  69% (41/59)Counting objects:  71% (42/59)Counting objects:  72% (43/59)Counting objects:  74% (44/59)Counting objects:  76% (45/59)Counting objects:  77% (46/59)Counting objects:  79% (47/59)Counting objects:  81% (48/59)Counting objects:  83% (49/59)Counting objects:  84% (50/59)Counting objects:  86% (51/59)Counting objects:  88% (52/59)Counting objects:  89% (53/59)Counting objects:  91% (54/59)Counting objects:  93% (55/59)Counting objects:  94% (56/59)Counting objects:  96% (57/59)Counting objects:  98% (58/59)Counting objects: 100% (59/59)Counting objects: 100% (59/59), done.
+Delta compression using up to 16 threads
+Compressing objects:   4% (1/22)Compressing objects:   9% (2/22)Compressing objects:  13% (3/22)Compressing objects:  18% (4/22)Compressing objects:  22% (5/22)Compressing objects:  27% (6/22)Compressing objects:  31% (7/22)Compressing objects:  36% (8/22)Compressing objects:  40% (9/22)Compressing objects:  45% (10/22)Compressing objects:  50% (11/22)Compressing objects:  54% (12/22)Compressing objects:  59% (13/22)Compressing objects:  63% (14/22)Compressing objects:  68% (15/22)Compressing objects:  72% (16/22)Compressing objects:  77% (17/22)Compressing objects:  81% (18/22)Compressing objects:  86% (19/22)Compressing objects:  90% (20/22)Compressing objects:  95% (21/22)Compressing objects: 100% (22/22)Compressing objects: 100% (22/22), done.
+Writing objects:   3% (1/30)Writing objects:   6% (2/30)Writing objects:  10% (3/30)Writing objects:  13% (4/30)Writing objects:  16% (5/30)Writing objects:  20% (6/30)Writing objects:  23% (7/30)Writing objects:  26% (8/30)Writing objects:  30% (9/30)Writing objects:  33% (10/30)Writing objects:  36% (11/30)Writing objects:  40% (12/30)Writing objects:  43% (13/30)Writing objects:  46% (14/30)Writing objects:  50% (15/30)Writing objects:  53% (16/30)Writing objects:  56% (17/30)Writing objects:  60% (18/30)Writing objects:  63% (19/30)Writing objects:  66% (20/30)Writing objects:  70% (21/30)Writing objects:  73% (22/30)Writing objects:  76% (23/30)Writing objects:  80% (24/30)Writing objects:  83% (25/30)Writing objects:  86% (26/30)Writing objects:  90% (27/30)Writing objects:  93% (28/30)Writing objects:  96% (29/30)Writing objects: 100% (30/30)Writing objects: 100% (30/30), 524.61 KiB | 840.00 KiB/s, done.
+Total 30 (delta 17), reused 0 (delta 0)
+remote: Resolving deltas:   0% (0/17)[Kremote: Resolving deltas:   5% (1/17)[Kremote: Resolving deltas:  11% (2/17)[Kremote: Resolving deltas:  17% (3/17)[Kremote: Resolving deltas:  23% (4/17)[Kremote: Resolving deltas:  29% (5/17)[Kremote: Resolving deltas:  35% (6/17)[Kremote: Resolving deltas:  41% (7/17)[Kremote: Resolving deltas:  47% (8/17)[Kremote: Resolving deltas:  52% (9/17)[Kremote: Resolving deltas:  58% (10/17)[Kremote: Resolving deltas:  64% (11/17)[Kremote: Resolving deltas:  70% (12/17)[Kremote: Resolving deltas:  76% (13/17)[Kremote: Resolving deltas:  82% (14/17)[Kremote: Resolving deltas:  88% (15/17)[Kremote: Resolving deltas:  94% (16/17)[Kremote: Resolving deltas: 100% (17/17)[Kremote: Resolving deltas: 100% (17/17), completed with 17 local objects.[K
+To https://github.com/a02338629-code/BIOL3070-Shumway
+   91daa36..4218067  master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+]0;~~$ git branch -r
+[?1h=  [31morigin/master[m[m
+[K[?1l>]0;~~$ git push -u origin main2 --force
+error: src refspec main2 does not match any
+[31merror: failed to push some refs to 'https://github.com/a02338629-code/BIOL3070-Shumway'
+[m]0;~~$ git push -u origin main3 --force
+error: src refspec main3 does not match any
+[31merror: failed to push some refs to 'https://github.com/a02338629-code/BIOL3070-Shumway'
+[m]0;~~$ git add .

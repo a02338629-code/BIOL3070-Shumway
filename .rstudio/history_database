@@ -694,3 +694,560 @@
 1762995652516:breaks = seq(0, 30, by = 2),  # show numbers every 2 units
 1762995652516:minor_breaks = seq(0, 30, by = 1)  # add smaller grid lines between major ones
 1762995652517:)
+1763499282477:knitr::opts_chunk$set(echo = TRUE)
+1763499282726:library(ggplot2)
+1763499282727:ggplot(asthma_data, aes(x = region, y = prevalence)) +
+1763499282728:geom_boxplot() +
+1763499282729:labs(title = "Asthma Prevalence by U.S. Region",
+1763499282729:x = "Region",
+1763499282730:y = "Asthma Prevalence (%)") +
+1763499282731:theme_minimal()
+1763499347331:knitr::opts_chunk$set(echo = TRUE)
+1763499347332:asthma_data <- data.frame(
+1763499347333:state = c("Alabama","Alaska","Arizona","Arkansas","California","Colorado","Connecticut",
+1763499347334:"Delaware","District of Columbia","Florida","Georgia","Hawaii","Idaho","Illinois",
+1763499347334:"Indiana","Iowa","Kansas","Kentucky","Louisiana","Maine","Maryland","Massachusetts",
+1763499347335:"Michigan","Minnesota","Mississippi","Missouri","Montana","Nebraska","Nevada",
+1763499347336:"New Hampshire","New Jersey","New Mexico","New York","North Carolina","North Dakota",
+1763499347337:"Ohio","Oklahoma","Oregon","Pennsylvania","Rhode Island","South Carolina",
+1763499347338:"South Dakota","Tennessee","Texas","Utah","Vermont","Virginia","Washington",
+1763499347338:"West Virginia","Wisconsin","Wyoming"),
+1763499347340:state_abrv = c("AL","AK", "AZ", "AR", "CA", "CO", "CT", "DE", "DC", "FL", "GA", "HI", "ID", "IL", "IN", "IA", "KS", "KY", "LA", "ME", "MD", "MA", "MI", "MN", "MS", "MO", "MT", "NE", "NV", "NH", "NJ", "NM", "NY", "NC", "ND", "OH", "OK", "OR", "PA", "RI", "SC", "SD", "TN", "TX", "UT", "VT", "VA", "WA", "WV", "WI", "WY"),
+1763499347341:number = c(378702,58742,555997,243032,2629546,500090,356651,
+1763499347342:78980,60410,1646583,802783,103228,161970,856488,
+1763499347343:574447,238689,237705,377365,351940,146031,499134,633126,
+1763499347344:935666,434473,211055,497216,102617,121412,251193,
+1763499347345:148330,644536,171212,1611027,764909,61944,
+1763499347345:1042354,373879,389831,1033741,117252,368883,
+1763499347346:56630,636322,1760654,266105,68112,671051,667228,
+1763499347347:181395,503318,46973),
+1763499347349:prevalence_raw = c("9.6 (0.59)","10.7 (0.58)","9.7 (0.49)","10.5 (0.57)","8.7 (0.39)","10.8 (0.43)","12.4 (0.51)",
+1763499347350:"9.9 (0.64)","11.1 (0.77)","9.3 (0.53)","9.6 (0.48)","9.1 (0.45)","11.1 (0.51)","8.7 (0.58)",
+1763499347350:"11.0 (0.39)","9.7 (0.42)","10.7 (0.41)","10.8 (0.68)","10.0 (0.55)","13.1 (0.52)","10.4 (0.38)","11.3 (0.43)",
+1763499347351:"11.9 (0.44)","9.9 (0.32)","9.4 (0.63)","10.4 (0.49)","11.7 (0.51)","8.1 (0.46)","10.1 (0.79)",
+1763499347352:"13.1 (0.64)","8.9 (0.43)","10.4 (0.62)","10.3 (0.34)","9.2 (0.62)","10.4 (0.60)",
+1763499347353:"11.4 (0.38)","12.3 (0.54)","11.5 (0.51)","10.1 (0.67)","13.3 (0.64)","9.0 (0.40)",
+1763499347354:"8.3 (0.75)","11.7 (0.61)","7.9 (0.37)","11.0 (0.43)","12.9 (0.53)","9.9 (0.46)","10.9 (0.26)",
+1763499347355:"12.9 (0.61)","10.9 (0.42)","10.5 (0.65)"),
+1763499347356:population = c(5108468, 733406, 7431344, 3067732, 38965193, 5877610, 3617176, 1031890, 678972,
+1763499347357:22610726, 11029227, 1435138, 1964726, 12549689, 6862199, 3207004, 2940546,
+1763499347358:4526154, 4573749, 1395722, 6180253, 7001399, 10037261, 5737915, 2939690,
+1763499347359:6196156, 1132812, 1978379, 3194176, 1402054, 9290842, 2114371, 19571216,
+1763499347360:10835491, 783926, 11785935, 4053824, 4233358, 12961683, 1095962, 5373555,
+1763499347360:919318, 7126489, 30503301, 3417735, 647464, 8715698, 7812880, 1770071,
+1763499347361:5910955, 584057)
+1763499347362:)
+1763499347392:library(dplyr)
+1763499347455:library(stringr)
+1763499347493:asthma_data <- asthma_data %>%
+1763499347494:mutate(
+1763499347494:prevalence = as.numeric(str_extract(prevalence_raw, "^[0-9.]+")),
+1763499347495:SE = as.numeric(str_extract(prevalence_raw, "(?<=\\().+?(?=\\))")),
+1763499347496:state_lower = tolower(state),
+1763499347497:region = state.region[match(state, state.name)]
+1763499347497:)
+1763499347536:asthma_data <- na.omit(asthma_data)
+1763499351099:library(ggplot2)
+1763499351100:ggplot(asthma_data, aes(x = region, y = prevalence)) +
+1763499351101:geom_boxplot() +
+1763499351102:labs(title = "Asthma Prevalence by U.S. Region",
+1763499351103:x = "Region",
+1763499351104:y = "Asthma Prevalence (%)") +
+1763499351105:theme_minimal()
+1763499407339:library(ggplot2)
+1763499407341:library(maps)
+1763499487734:install.packages(maps)
+1763499487881:library(ggplot2)
+1763499487883:library(maps)
+1763499505648:install.packages("maps")
+1763499507399:library(ggplot2)
+1763499507400:library(maps)
+1763499507414:library(dplyr)
+1763499507415:# Map data
+1763499507416:states_map <- map_data("state")
+1763499507425:# Merge map data with asthma data
+1763499507426:map_data <- states_map %>%
+1763499507427:left_join(asthma_data, by = c("region" = "state_lower"))
+1763499507449:ggplot(map_data, aes(long, lat, group = group, fill = prevalence)) +
+1763499507450:geom_polygon(color = "gray90", size = 0.3) +  # state borders
+1763499507451:geom_polygon(aes(fill = prevalence), color = "white") +
+1763499507451:coord_fixed(1.3) +
+1763499507452:scale_fill_gradientn(
+1763499507453:name = "Asthma Prevalence (%)",
+1763499507454:colors = c("yellow2", "orange", "red", "red4")
+1763499507455:) +
+1763499507455:labs(
+1763499507456:title = "Asthma Prevalence by U.S. State"
+1763499507457:) +
+1763499507458:theme_void() +
+1763499507459:theme(
+1763499507460:legend.position = "right",
+1763499507460:plot.title = element_text(size = 16, face = "bold"),
+1763499507461:plot.subtitle = element_text(size = 12)
+1763499507462:)
+1763499565520:# U.S. states map data
+1763499565522:states_map <- map_data("state")
+1763499565530:# Put the states into regions in a dataframe
+1763499565531:state_regions <- data.frame(
+1763499565532:state = tolower(state.name),
+1763499565533:region = state.region
+1763499565534:)
+1763499565539:# Merge map data with region info
+1763499565540:map_data <- states_map %>%
+1763499565540:left_join(state_regions, by = c("region" = "state"))
+1763499565546:# Plot
+1763499565547:ggplot(map_data, aes(x = long, y = lat, group = group, fill = region.y)) +
+1763499565548:geom_polygon(color = "white") +
+1763499565548:coord_fixed(1.3) +
+1763499565549:labs(title = "Four U.S. Census Regions",
+1763499565550:fill = "Region") +
+1763499565551:theme_void()
+1763499569341:ggplot(asthma_data, aes(x = population, y = prevalence)) +
+1763499569342:geom_point(aes(color=region)) +
+1763499569343:geom_text(aes(label = state_abrv), vjust = -0.5, size = 3)+
+1763499569344:labs(title = "Number of Individuals With Asthma vs. Asthma Prevalence by State",
+1763499569345:x = "Population",
+1763499569345:y = "Asthma Prevalence (%)") +
+1763499569346:theme_minimal()
+1763499577721:library(ggplot2)
+1763499577722:ggplot(asthma_data, aes(x = reorder(state, prevalence), y = prevalence)) +
+1763499577723:geom_col(fill = "steelblue") +
+1763499577724:coord_flip() +
+1763499577725:labs(title = "Asthma Prevalence by U.S. State",
+1763499577726:x = "State",
+1763499577726:y = "Asthma Prevalence (%)") +
+1763499577727:theme_minimal()
+1763499700013:library(ggplot2)
+1763499700015:ggplot(asthma_data, aes(x = region, y = prevalence)) +
+1763499700016:geom_boxplot() +
+1763499700017:labs(title = "Asthma Prevalence by U.S. Region",
+1763499700018:x = "Region",
+1763499700019:y = "Asthma Prevalence (%)") +
+1763499700020:theme_minimal()
+1763499703596:knitr::opts_chunk$set(echo = TRUE)
+1763499703657:asthma_data <- data.frame(
+1763499703658:state = c("Alabama","Alaska","Arizona","Arkansas","California","Colorado","Connecticut",
+1763499703659:"Delaware","District of Columbia","Florida","Georgia","Hawaii","Idaho","Illinois",
+1763499703660:"Indiana","Iowa","Kansas","Kentucky","Louisiana","Maine","Maryland","Massachusetts",
+1763499703661:"Michigan","Minnesota","Mississippi","Missouri","Montana","Nebraska","Nevada",
+1763499703661:"New Hampshire","New Jersey","New Mexico","New York","North Carolina","North Dakota",
+1763499703662:"Ohio","Oklahoma","Oregon","Pennsylvania","Rhode Island","South Carolina",
+1763499703663:"South Dakota","Tennessee","Texas","Utah","Vermont","Virginia","Washington",
+1763499703664:"West Virginia","Wisconsin","Wyoming"),
+1763499703666:state_abrv = c("AL","AK", "AZ", "AR", "CA", "CO", "CT", "DE", "DC", "FL", "GA", "HI", "ID", "IL", "IN", "IA", "KS", "KY", "LA", "ME", "MD", "MA", "MI", "MN", "MS", "MO", "MT", "NE", "NV", "NH", "NJ", "NM", "NY", "NC", "ND", "OH", "OK", "OR", "PA", "RI", "SC", "SD", "TN", "TX", "UT", "VT", "VA", "WA", "WV", "WI", "WY"),
+1763499703667:number = c(378702,58742,555997,243032,2629546,500090,356651,
+1763499703668:78980,60410,1646583,802783,103228,161970,856488,
+1763499703669:574447,238689,237705,377365,351940,146031,499134,633126,
+1763499703670:935666,434473,211055,497216,102617,121412,251193,
+1763499703671:148330,644536,171212,1611027,764909,61944,
+1763499703672:1042354,373879,389831,1033741,117252,368883,
+1763499703673:56630,636322,1760654,266105,68112,671051,667228,
+1763499703674:181395,503318,46973),
+1763499703675:prevalence_raw = c("9.6 (0.59)","10.7 (0.58)","9.7 (0.49)","10.5 (0.57)","8.7 (0.39)","10.8 (0.43)","12.4 (0.51)",
+1763499703676:"9.9 (0.64)","11.1 (0.77)","9.3 (0.53)","9.6 (0.48)","9.1 (0.45)","11.1 (0.51)","8.7 (0.58)",
+1763499703677:"11.0 (0.39)","9.7 (0.42)","10.7 (0.41)","10.8 (0.68)","10.0 (0.55)","13.1 (0.52)","10.4 (0.38)","11.3 (0.43)",
+1763499703678:"11.9 (0.44)","9.9 (0.32)","9.4 (0.63)","10.4 (0.49)","11.7 (0.51)","8.1 (0.46)","10.1 (0.79)",
+1763499703679:"13.1 (0.64)","8.9 (0.43)","10.4 (0.62)","10.3 (0.34)","9.2 (0.62)","10.4 (0.60)",
+1763499703680:"11.4 (0.38)","12.3 (0.54)","11.5 (0.51)","10.1 (0.67)","13.3 (0.64)","9.0 (0.40)",
+1763499703681:"8.3 (0.75)","11.7 (0.61)","7.9 (0.37)","11.0 (0.43)","12.9 (0.53)","9.9 (0.46)","10.9 (0.26)",
+1763499703682:"12.9 (0.61)","10.9 (0.42)","10.5 (0.65)"),
+1763499703684:population = c(5108468, 733406, 7431344, 3067732, 38965193, 5877610, 3617176, 1031890, 678972,
+1763499703685:22610726, 11029227, 1435138, 1964726, 12549689, 6862199, 3207004, 2940546,
+1763499703686:4526154, 4573749, 1395722, 6180253, 7001399, 10037261, 5737915, 2939690,
+1763499703687:6196156, 1132812, 1978379, 3194176, 1402054, 9290842, 2114371, 19571216,
+1763499703687:10835491, 783926, 11785935, 4053824, 4233358, 12961683, 1095962, 5373555,
+1763499703688:919318, 7126489, 30503301, 3417735, 647464, 8715698, 7812880, 1770071,
+1763499703689:5910955, 584057)
+1763499703690:)
+1763499703721:library(dplyr)
+1763499703722:library(stringr)
+1763499703724:asthma_data <- asthma_data %>%
+1763499703725:mutate(
+1763499703726:prevalence = as.numeric(str_extract(prevalence_raw, "^[0-9.]+")),
+1763499703726:SE = as.numeric(str_extract(prevalence_raw, "(?<=\\().+?(?=\\))")),
+1763499703727:state_lower = tolower(state),
+1763499703728:region = state.region[match(state, state.name)]
+1763499703729:)
+1763499703747:asthma_data <- na.omit(asthma_data)
+1763499707465:install.packages("maps")
+1763499707469:library(ggplot2)
+1763499707470:library(maps)
+1763499707471:library(dplyr)
+1763499707472:# Map data
+1763499707473:states_map <- map_data("state")
+1763499707482:# Merge map data with asthma data
+1763499707484:map_data <- states_map %>%
+1763499707484:left_join(asthma_data, by = c("region" = "state_lower"))
+1763499707493:ggplot(map_data, aes(long, lat, group = group, fill = prevalence)) +
+1763499707494:geom_polygon(color = "gray90", size = 0.3) +  # state borders
+1763499707495:geom_polygon(aes(fill = prevalence), color = "white") +
+1763499707496:coord_fixed(1.3) +
+1763499707497:scale_fill_gradientn(
+1763499707498:name = "Asthma Prevalence (%)",
+1763499707499:colors = c("yellow2", "orange", "red", "red4")
+1763499707500:) +
+1763499707501:labs(
+1763499707501:title = "Asthma Prevalence by U.S. State"
+1763499707502:) +
+1763499707504:theme_void() +
+1763499707505:theme(
+1763499707505:legend.position = "right",
+1763499707506:plot.title = element_text(size = 16, face = "bold"),
+1763499707507:plot.subtitle = element_text(size = 12)
+1763499707508:)
+1763499723850:library(ggplot2)
+1763499723851:ggplot(asthma_data, aes(x = region, y = prevalence)) +
+1763499723852:geom_boxplot() +
+1763499723853:labs(title = "Asthma Prevalence by U.S. Region",
+1763499723854:x = "Region",
+1763499723855:y = "Asthma Prevalence (%)") +
+1763499723856:theme_minimal()
+1763499735139:install.packages("maps")
+1763499735143:library(ggplot2)
+1763499735144:library(maps)
+1763499735145:library(dplyr)
+1763499735146:# Map data
+1763499735147:states_map <- map_data("state")
+1763499735156:# Merge map data with asthma data
+1763499735157:map_data <- states_map %>%
+1763499735158:left_join(asthma_data, by = c("region" = "state_lower"))
+1763499735166:ggplot(map_data, aes(long, lat, group = group, fill = prevalence)) +
+1763499735167:geom_polygon(color = "gray90", size = 0.3) +  # state borders
+1763499735168:geom_polygon(aes(fill = prevalence), color = "white") +
+1763499735169:coord_fixed(1.3) +
+1763499735170:scale_fill_gradientn(
+1763499735171:name = "Asthma Prevalence (%)",
+1763499735172:colors = c("yellow2", "orange", "red", "red4")
+1763499735172:) +
+1763499735173:labs(
+1763499735174:title = "Asthma Prevalence by U.S. State"
+1763499735175:) +
+1763499735176:theme_void() +
+1763499735177:theme(
+1763499735178:legend.position = "right",
+1763499735179:plot.title = element_text(size = 16, face = "bold"),
+1763499735180:plot.subtitle = element_text(size = 12)
+1763499735180:)
+1763499759548:knitr::opts_chunk$set(echo = TRUE)
+1763499759804:install.packages("maps")
+1763499761420:library(ggplot2)
+1763499762341:library(maps)
+1763499762378:library(dplyr)
+1763499762387:# Map data
+1763499762388:states_map <- map_data("state")
+1763499762399:# Merge map data with asthma data
+1763499762400:map_data <- states_map %>%
+1763499762400:left_join(asthma_data, by = c("region" = "state_lower"))
+1763499762412:ggplot(map_data, aes(long, lat, group = group, fill = prevalence)) +
+1763499762413:geom_polygon(color = "gray90", size = 0.3) +  # state borders
+1763499762414:geom_polygon(aes(fill = prevalence), color = "white") +
+1763499762414:coord_fixed(1.3) +
+1763499762415:scale_fill_gradientn(
+1763499762415:name = "Asthma Prevalence (%)",
+1763499762416:colors = c("yellow2", "orange", "red", "red4")
+1763499762417:) +
+1763499762417:labs(
+1763499762418:title = "Asthma Prevalence by U.S. State"
+1763499762418:) +
+1763499762419:theme_void() +
+1763499762420:theme(
+1763499762420:legend.position = "right",
+1763499762421:plot.title = element_text(size = 16, face = "bold"),
+1763499762421:plot.subtitle = element_text(size = 12)
+1763499762422:)
+1763499779558:library(ggplot2)
+1763499779558:library(maps)
+1763499779559:library(dplyr)
+1763499779560:# Map data
+1763499779561:states_map <- map_data("state")
+1763499779569:# Merge map data with asthma data
+1763499779570:map_data <- states_map %>%
+1763499779571:left_join(asthma_data, by = c("region" = "state_lower"))
+1763499779578:ggplot(map_data, aes(long, lat, group = group, fill = prevalence)) +
+1763499779579:geom_polygon(color = "gray90", size = 0.3) +  # state borders
+1763499779579:geom_polygon(aes(fill = prevalence), color = "white") +
+1763499779580:coord_fixed(1.3) +
+1763499779580:scale_fill_gradientn(
+1763499779581:name = "Asthma Prevalence (%)",
+1763499779582:colors = c("yellow2", "orange", "red", "red4")
+1763499779582:) +
+1763499779583:labs(
+1763499779584:title = "Asthma Prevalence by U.S. State"
+1763499779584:) +
+1763499779585:theme_void() +
+1763499779585:theme(
+1763499779586:legend.position = "right",
+1763499779587:plot.title = element_text(size = 16, face = "bold"),
+1763499779587:plot.subtitle = element_text(size = 12)
+1763499779588:)
+1763499784901:library(ggplot2)
+1763499784903:ggplot(asthma_data, aes(x = region, y = prevalence)) +
+1763499784903:geom_boxplot() +
+1763499784904:labs(title = "Asthma Prevalence by U.S. Region",
+1763499784905:x = "Region",
+1763499784905:y = "Asthma Prevalence (%)") +
+1763499784906:theme_minimal()
+1763499808638:# U.S. states map data
+1763499808639:states_map <- map_data("state")
+1763499808648:# Put the states into regions in a dataframe
+1763499808649:state_regions <- data.frame(
+1763499808649:state = tolower(state.name),
+1763499808650:region = state.region
+1763499808651:)
+1763499808658:# Merge map data with region info
+1763499808659:map_data <- states_map %>%
+1763499808660:left_join(state_regions, by = c("region" = "state"))
+1763499808665:# Plot
+1763499808666:ggplot(map_data, aes(x = long, y = lat, group = group, fill = region.y)) +
+1763499808667:geom_polygon(color = "white") +
+1763499808667:coord_fixed(1.3) +
+1763499808668:labs(title = "Four U.S. Census Regions",
+1763499808668:fill = "Region") +
+1763499808669:theme_void()
+1763499818722:ggplot(asthma_data, aes(x = population, y = prevalence)) +
+1763499818722:geom_point(aes(color=region)) +
+1763499818723:geom_text(aes(label = state_abrv), vjust = -0.5, size = 3)+
+1763499818724:labs(title = "Number of Individuals With Asthma vs. Asthma Prevalence by State",
+1763499818725:x = "Population",
+1763499818725:y = "Asthma Prevalence (%)") +
+1763499818726:theme_minimal()
+1763499822594:library(ggplot2)
+1763499822595:ggplot(asthma_data, aes(x = reorder(state, prevalence), y = prevalence)) +
+1763499822596:geom_col(fill = "steelblue") +
+1763499822597:coord_flip() +
+1763499822597:labs(title = "Asthma Prevalence by U.S. State",
+1763499822598:x = "State",
+1763499822599:y = "Asthma Prevalence (%)") +
+1763499822600:theme_minimal()
+1763499835941:library(ggplot2)
+1763499835970:age <- data.frame(
+1763499835971:category = c(" 0-4", " 5-11", "12-17", "18-24", "25-34", "35-64", "65+"),
+1763499835971:value = c(1.4, 2.4, 2.0, 3.8, 6.4, 11.5, 27.1)
+1763499835972:)
+1763499835976:ggplot(age, aes(x = category, y = value)) +
+1763499835976:geom_bar(stat = "identity", fill = "darkred") +
+1763499835977:labs(
+1763499835978:title = "Asthma Deaths By Age Group",
+1763499835978:x = "Age (Years)",
+1763499835979:y = "Asthma-Related Deaths Per Million",
+1763499835979:caption = "Figure 1. Asthma-related deaths in 2021 occurring by age group per million as reported by the CDC."
+1763499835980:) +
+1763499835981:scale_y_continuous(
+1763499835981:breaks = seq(0, 30, by = 2),  # show numbers every 2 units
+1763499835982:minor_breaks = seq(0, 30, by = 1)  # add smaller grid lines between major ones
+1763499835983:)
+1763499883748:# Load required libraries
+1763499883749:library(tidyverse)
+1763499946459:# Load required libraries
+1763499946460:library(tidyverse)
+1763499947094:# Read the CSV file
+1763499947095:state_data <- read_csv("state_data.csv")
+1763500015947:# Load required libraries
+1763500016005:library(tidyverse)
+1763500016008:# Read the CSV file
+1763500016008:state_data <- read_csv("state_data.csv")
+1763500016248:# Clean and separate the "Rate (SE)" column into two numeric columns
+1763500016248:state_data <- state_data %>%
+1763500016249:separate(`Rate (SE)`, into = c("Rate", "SE"), sep = " \\(", remove = TRUE) %>%
+1763500016250:mutate(
+1763500016250:Rate = as.numeric(Rate),
+1763500016251:SE = as.numeric(str_remove(SE, "\\)"))
+1763500016252:)
+1763500028914:rlang::last_trace()
+1763500072057:# Load required libraries
+1763500072087:library(tidyverse)
+1763500072088:# Read the CSV file
+1763500072089:state_data <- read_csv("state_data.csv")
+1763500072257:# Create the plot
+1763500072258:ggplot(state_data, aes(x = reorder(State, Rate), y = Rate)) +
+1763500072258:geom_col(fill = "steelblue") +
+1763500072259:geom_errorbar(aes(ymin = Rate - SE, ymax = Rate + SE), width = 0.3) +
+1763500072260:coord_flip() +
+1763500072261:labs(
+1763500072261:title = "Asthma Rates by State ",
+1763500072262:x = "State",
+1763500072263:y = "Rate (%)"
+1763500072263:) +
+1763500072264:theme_minimal(base_size = 12) +
+1763500072265:theme(
+1763500072265:axis.text.y = element_text(size = 10, margin = margin(r = 5)),
+1763500072266:plot.margin = margin(10, 15, 10, 15)
+1763500072267:)
+1763500186039:# Load required libraries
+1763500186040:library(tidyverse)
+1763500186041:# Read the CSV file
+1763500186042:state_data <- read_csv("state_data.csv")
+1763500186210:# Create the plot
+1763500186211:ggplot(state_data, aes(x = reorder(State, Percent With Current Asthma), y = Rate)) +
+1763500245540:# Load required libraries
+1763500245541:library(tidyverse)
+1763500245543:# Read the CSV file
+1763500245543:state_data <- read_csv("state_data.csv")
+1763500245698:# Create the plot
+1763500245699:ggplot(state_data, aes(x = reorder(State, Percent With Current Athsma), y = Rate)) +
+1763500323417:# Load required libraries
+1763500323418:library(tidyverse)
+1763500323419:# Read the CSV file
+1763500323449:state_data <- read_csv("state_data.csv")
+1763500323648:# Create the plot
+1763500323649:ggplot(state_data, aes(x = reorder(State), y = Percent With Current Athsma)) +
+1763500390408:# Load required libraries
+1763500390409:library(tidyverse)
+1763500390410:# Read the CSV file
+1763500390411:state_data <- read_csv("state_data.csv")
+1763500390572:# Create the plot
+1763500390572:ggplot(state_data, aes(x = reorder(State,`Percent With Current Athsma`), y = `Percent With Current Athsma`)) +
+1763500390573:geom_col(fill = "steelblue") +
+1763500390574:geom_errorbar(aes(ymin = Percent With Current Athsma - SE, ymax = Percent With Current Athsma + SE), width = 0.3) +
+1763500402538:# Load required libraries
+1763500402568:library(tidyverse)
+1763500402569:# Read the CSV file
+1763500402570:state_data <- read_csv("state_data.csv")
+1763500402717:# Create the plot
+1763500402718:ggplot(state_data, aes(x = reorder(State,`Percent With Current Athsma`), y = `Percent With Current Athsma`)) +
+1763500402718:geom_col(fill = "steelblue") +
+1763500402719:geom_errorbar(aes(ymin = `Percent With Current Athsma` - SE, ymax = `Percent With Current Athsma` + SE), width = 0.3) +
+1763500402720:coord_flip() +
+1763500402720:labs(
+1763500402721:title = "Asthma Rates by State ",
+1763500402722:x = "State",
+1763500402722:y = "Rate (%)"
+1763500402723:) +
+1763500402724:theme_minimal(base_size = 12) +
+1763500402724:theme(
+1763500402725:axis.text.y = element_text(size = 10, margin = margin(r = 5)),
+1763500402726:plot.margin = margin(10, 15, 10, 15)
+1763500402726:)
+1763500481716:View(asthma_data)
+1763500601246:knitr::opts_chunk$set(echo = TRUE)
+1763500601247:asthma_data <- data.frame(
+1763500601248:state = c("Alabama","Alaska","Arizona","Arkansas","California","Colorado","Connecticut",
+1763500601249:"Delaware","District of Columbia","Florida","Georgia","Hawaii","Idaho","Illinois",
+1763500601250:"Indiana","Iowa","Kansas","Kentucky","Louisiana","Maine","Maryland","Massachusetts",
+1763500601250:"Michigan","Minnesota","Mississippi","Missouri","Montana","Nebraska","Nevada",
+1763500601251:"New Hampshire","New Jersey","New Mexico","New York","North Carolina","North Dakota",
+1763500601252:"Ohio","Oklahoma","Oregon","Pennsylvania","Rhode Island","South Carolina",
+1763500601253:"South Dakota","Tennessee","Texas","Utah","Vermont","Virginia","Washington",
+1763500601253:"West Virginia","Wisconsin","Wyoming"),
+1763500601255:state_abrv = c("AL","AK", "AZ", "AR", "CA", "CO", "CT", "DE", "DC", "FL", "GA", "HI", "ID", "IL", "IN", "IA", "KS", "KY", "LA", "ME", "MD", "MA", "MI", "MN", "MS", "MO", "MT", "NE", "NV", "NH", "NJ", "NM", "NY", "NC", "ND", "OH", "OK", "OR", "PA", "RI", "SC", "SD", "TN", "TX", "UT", "VT", "VA", "WA", "WV", "WI", "WY"),
+1763500601256:number = c(378702,58742,555997,243032,2629546,500090,356651,
+1763500601257:78980,60410,1646583,802783,103228,161970,856488,
+1763500601257:574447,238689,237705,377365,351940,146031,499134,633126,
+1763500601258:935666,434473,211055,497216,102617,121412,251193,
+1763500601259:148330,644536,171212,1611027,764909,61944,
+1763500601260:1042354,373879,389831,1033741,117252,368883,
+1763500601260:56630,636322,1760654,266105,68112,671051,667228,
+1763500601261:181395,503318,46973),
+1763500601262:prevalence_raw = c("9.6 (0.59)","10.7 (0.58)","9.7 (0.49)","10.5 (0.57)","8.7 (0.39)","10.8 (0.43)","12.4 (0.51)",
+1763500601263:"9.9 (0.64)","11.1 (0.77)","9.3 (0.53)","9.6 (0.48)","9.1 (0.45)","11.1 (0.51)","8.7 (0.58)",
+1763500601264:"11.0 (0.39)","9.7 (0.42)","10.7 (0.41)","10.8 (0.68)","10.0 (0.55)","13.1 (0.52)","10.4 (0.38)","11.3 (0.43)",
+1763500601265:"11.9 (0.44)","9.9 (0.32)","9.4 (0.63)","10.4 (0.49)","11.7 (0.51)","8.1 (0.46)","10.1 (0.79)",
+1763500601266:"13.1 (0.64)","8.9 (0.43)","10.4 (0.62)","10.3 (0.34)","9.2 (0.62)","10.4 (0.60)",
+1763500601267:"11.4 (0.38)","12.3 (0.54)","11.5 (0.51)","10.1 (0.67)","13.3 (0.64)","9.0 (0.40)",
+1763500601267:"8.3 (0.75)","11.7 (0.61)","7.9 (0.37)","11.0 (0.43)","12.9 (0.53)","9.9 (0.46)","10.9 (0.26)",
+1763500601268:"12.9 (0.61)","10.9 (0.42)","10.5 (0.65)"),
+1763500601270:population = c(5108468, 733406, 7431344, 3067732, 38965193, 5877610, 3617176, 1031890, 678972,
+1763500601270:22610726, 11029227, 1435138, 1964726, 12549689, 6862199, 3207004, 2940546,
+1763500601271:4526154, 4573749, 1395722, 6180253, 7001399, 10037261, 5737915, 2939690,
+1763500601272:6196156, 1132812, 1978379, 3194176, 1402054, 9290842, 2114371, 19571216,
+1763500601273:10835491, 783926, 11785935, 4053824, 4233358, 12961683, 1095962, 5373555,
+1763500601273:919318, 7126489, 30503301, 3417735, 647464, 8715698, 7812880, 1770071,
+1763500601274:5910955, 584057)
+1763500601275:)
+1763500601282:library(dplyr)
+1763500601283:library(stringr)
+1763500601285:asthma_data <- asthma_data %>%
+1763500601285:mutate(
+1763500601286:prevalence = as.numeric(str_extract(prevalence_raw, "^[0-9.]+")),
+1763500601287:SE = as.numeric(str_extract(prevalence_raw, "(?<=\\().+?(?=\\))")),
+1763500601288:state_lower = tolower(state),
+1763500601288:region = state.region[match(state, state.name)]
+1763500601289:)
+1763500601311:asthma_data <- na.omit(asthma_data)
+1763500905825:install.packages("tidyverse")
+1763500905828:install.packages("readxl")
+1763500907417:install.packages("car")
+1763500923761:install.packages("lme4")
+1763500925357:install.packages("emmeans")
+1763500928079:install.packages("ggplot2")
+1763501077255:install.packages("tidyverse")
+1763501361059:knitr::opts_chunk$set(echo = TRUE)
+1763501361203:# --- Load required packages (must already be installed) ---
+1763501361203:library(tidyverse)   # data wrangling and ggplot2
+1763501362357:library(readxl)      # reading Excel files
+1763501362370:library(car)         # ANOVA tests
+1763501362402:library(lme4)        # linear and mixed models
+1763501363735:library(emmeans)     # estimated marginal means
+1763501363776:library(ggplot2)     # graphics
+1763501363777:# --- Linear model ---
+1763501363778:# response: prevalence
+1763501363778:# predictor: pop_density_sqmile
+1763501363779:# dataset: asthma_data (must be defined earlier)
+1763501363780:m1 <- lm(prevalence ~ pop_density_sqmile, data = asthma_data)
+1763501467378:# --- Load required packages (must already be installed) ---
+1763501467379:library(tidyverse)   # data wrangling and ggplot2
+1763501467380:library(readxl)      # reading Excel files
+1763501467381:library(car)         # ANOVA tests
+1763501467382:library(lme4)        # linear and mixed models
+1763501467383:library(emmeans)     # estimated marginal means
+1763501467384:library(ggplot2)     # graphics
+1763501467385:# 1. First, we create a simple linear model. We name the model m1.
+1763501467386:m1 <- lm(prevalence ~ pop_density_sqmile, data=asthma_data) # here, my response (dependent) variable is prevalence, and the predictor (independent) variable is population density. In words, this model is asking, "does the data in column pop_density_sqmile explain variance in column prevalence, within the dataset called asthma_data?".
+1763501772793:knitr::opts_chunk$set(echo = TRUE)
+1763501772794:asthma_data <- data.frame(
+1763501772795:state = c("Alabama","Alaska","Arizona","Arkansas","California","Colorado","Connecticut",
+1763501772795:"Delaware","District of Columbia","Florida","Georgia","Hawaii","Idaho","Illinois",
+1763501772796:"Indiana","Iowa","Kansas","Kentucky","Louisiana","Maine","Maryland","Massachusetts",
+1763501772797:"Michigan","Minnesota","Mississippi","Missouri","Montana","Nebraska","Nevada",
+1763501772798:"New Hampshire","New Jersey","New Mexico","New York","North Carolina","North Dakota",
+1763501772798:"Ohio","Oklahoma","Oregon","Pennsylvania","Rhode Island","South Carolina",
+1763501772799:"South Dakota","Tennessee","Texas","Utah","Vermont","Virginia","Washington",
+1763501772800:"West Virginia","Wisconsin","Wyoming"),
+1763501772801:state_abrv = c("AL","AK", "AZ", "AR", "CA", "CO", "CT", "DE", "DC", "FL", "GA", "HI", "ID", "IL", "IN", "IA", "KS", "KY", "LA", "ME", "MD", "MA", "MI", "MN", "MS", "MO", "MT", "NE", "NV", "NH", "NJ", "NM", "NY", "NC", "ND", "OH", "OK", "OR", "PA", "RI", "SC", "SD", "TN", "TX", "UT", "VT", "VA", "WA", "WV", "WI", "WY"),
+1763501772803:number = c(378702,58742,555997,243032,2629546,500090,356651,
+1763501772804:78980,60410,1646583,802783,103228,161970,856488,
+1763501772804:574447,238689,237705,377365,351940,146031,499134,633126,
+1763501772805:935666,434473,211055,497216,102617,121412,251193,
+1763501772806:148330,644536,171212,1611027,764909,61944,
+1763501772807:1042354,373879,389831,1033741,117252,368883,
+1763501772807:56630,636322,1760654,266105,68112,671051,667228,
+1763501772808:181395,503318,46973),
+1763501772810:prevalence_raw = c("9.6 (0.59)","10.7 (0.58)","9.7 (0.49)","10.5 (0.57)","8.7 (0.39)","10.8 (0.43)","12.4 (0.51)",
+1763501772810:"9.9 (0.64)","11.1 (0.77)","9.3 (0.53)","9.6 (0.48)","9.1 (0.45)","11.1 (0.51)","8.7 (0.58)",
+1763501772811:"11.0 (0.39)","9.7 (0.42)","10.7 (0.41)","10.8 (0.68)","10.0 (0.55)","13.1 (0.52)","10.4 (0.38)","11.3 (0.43)",
+1763501772812:"11.9 (0.44)","9.9 (0.32)","9.4 (0.63)","10.4 (0.49)","11.7 (0.51)","8.1 (0.46)","10.1 (0.79)",
+1763501772813:"13.1 (0.64)","8.9 (0.43)","10.4 (0.62)","10.3 (0.34)","9.2 (0.62)","10.4 (0.60)",
+1763501772814:"11.4 (0.38)","12.3 (0.54)","11.5 (0.51)","10.1 (0.67)","13.3 (0.64)","9.0 (0.40)",
+1763501772814:"8.3 (0.75)","11.7 (0.61)","7.9 (0.37)","11.0 (0.43)","12.9 (0.53)","9.9 (0.46)","10.9 (0.26)",
+1763501772815:"12.9 (0.61)","10.9 (0.42)","10.5 (0.65)"),
+1763501772845:population = c(5108468, 733406, 7431344, 3067732, 38965193, 5877610, 3617176, 1031890, 678972,
+1763501772846:22610726, 11029227, 1435138, 1964726, 12549689, 6862199, 3207004, 2940546,
+1763501772846:4526154, 4573749, 1395722, 6180253, 7001399, 10037261, 5737915, 2939690,
+1763501772847:6196156, 1132812, 1978379, 3194176, 1402054, 9290842, 2114371, 19571216,
+1763501772848:10835491, 783926, 11785935, 4053824, 4233358, 12961683, 1095962, 5373555,
+1763501772849:919318, 7126489, 30503301, 3417735, 647464, 8715698, 7812880, 1770071,
+1763501772850:5910955, 584057),
+1763501772851:pop_density_sqmile = c(101,1.3,65,59,250,57,747,529,11131,422,192,223,24,226,192,57,36,115,106,45,637,898,178,72,63,90,7.8,26,29,157,1263,17,415,223,11,274,59,44,290,1060,179,12,173,117,42,70,221,118,74,109,6)
+1763501772851:)
+1763501772859:library(dplyr)
+1763501772860:library(stringr)
+1763501772861:asthma_data <- asthma_data %>%
+1763501772862:mutate(
+1763501772863:prevalence = as.numeric(str_extract(prevalence_raw, "^[0-9.]+")),
+1763501772864:SE = as.numeric(str_extract(prevalence_raw, "(?<=\\().+?(?=\\))")),
+1763501772864:state_lower = tolower(state),
+1763501772865:region = state.region[match(state, state.name)]
+1763501772866:)
+1763501772914:asthma_data <- na.omit(asthma_data)
+1763501803839:# --- Load required packages (must already be installed) ---
+1763501803840:library(tidyverse)   # data wrangling and ggplot2
+1763501803841:library(readxl)      # reading Excel files
+1763501803842:library(car)         # ANOVA tests
+1763501803843:library(lme4)        # linear and mixed models
+1763501803844:library(emmeans)     # estimated marginal means
+1763501803844:library(ggplot2)     # graphics
+1763501803846:# 1. First, we create a simple linear model. We name the model m1.
+1763501803846:m1 <- lm(prevalence ~ pop_density_sqmile, data=asthma_data) # here, my response (dependent) variable is prevalence, and the predictor (independent) variable is population density. In words, this model is asking, "does the data in column pop_density_sqmile explain variance in column prevalence, within the dataset called asthma_data?".
+1763501803874:# 2. Next, we conduct our statistical test: an analysis of variance.
+1763501803875:Anova(m1) # This tells us whether there is a significant effect of population density on asthma prevalence, and provides us the ingredients for our statistical reporting. Cool!
+1763501803889:summary(m1) # This gives other important ingredients to report from our statistics, such as the amount of variance explained by our independent variable; the degrees of freedom; and our test statistic. The important information to report is at the bottom of this output.
