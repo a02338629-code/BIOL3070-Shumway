@@ -309,3 +309,134 @@ error: src refspec main2 does not match any
 error: src refspec main3 does not match any
 [31merror: failed to push some refs to 'https://github.com/a02338629-code/BIOL3070-Shumway'
 [m]0;~~$ git add .
+]0;~~$ git commit -m "Initial commit"
+[master d3bc2d4] Initial commit
+ 22 files changed, 3281 insertions(+), 2551 deletions(-)
+ create mode 100644 .rstudio/client-state/vcs_git.persistent
+ rewrite .rstudio/projects/f8ce556a/console07/INDEX001 (85%)
+ rewrite .rstudio/sessions/active/session-de83db41/suspended-session-data/console_actions (62%)
+ rewrite .rstudio/sessions/active/session-de83db41/suspended-session-data/history (94%)
+]0;~~$ git push -u origin master
+Username for 'https://github.com': a02338629-code
+Password for 'https://a02338629-code@github.com': 
+Enumerating objects: 70, done.
+Counting objects:   1% (1/70)Counting objects:   2% (2/70)Counting objects:   4% (3/70)Counting objects:   5% (4/70)Counting objects:   7% (5/70)Counting objects:   8% (6/70)Counting objects:  10% (7/70)Counting objects:  11% (8/70)Counting objects:  12% (9/70)Counting objects:  14% (10/70)Counting objects:  15% (11/70)Counting objects:  17% (12/70)Counting objects:  18% (13/70)Counting objects:  20% (14/70)Counting objects:  21% (15/70)Counting objects:  22% (16/70)Counting objects:  24% (17/70)Counting objects:  25% (18/70)Counting objects:  27% (19/70)Counting objects:  28% (20/70)Counting objects:  30% (21/70)Counting objects:  31% (22/70)Counting objects:  32% (23/70)Counting objects:  34% (24/70)Counting objects:  35% (25/70)Counting objects:  37% (26/70)Counting objects:  38% (27/70)Counting objects:  40% (28/70)Counting objects:  41% (29/70)Counting objects:  42% (30/70)Counting objects:  44% (31/70)Counting objects:  45% (32/70)Counting objects:  47% (33/70)Counting objects:  48% (34/70)Counting objects:  50% (35/70)Counting objects:  51% (36/70)Counting objects:  52% (37/70)Counting objects:  54% (38/70)Counting objects:  55% (39/70)Counting objects:  57% (40/70)Counting objects:  58% (41/70)Counting objects:  60% (42/70)Counting objects:  61% (43/70)Counting objects:  62% (44/70)Counting objects:  64% (45/70)Counting objects:  65% (46/70)Counting objects:  67% (47/70)Counting objects:  68% (48/70)Counting objects:  70% (49/70)Counting objects:  71% (50/70)Counting objects:  72% (51/70)Counting objects:  74% (52/70)Counting objects:  75% (53/70)Counting objects:  77% (54/70)Counting objects:  78% (55/70)Counting objects:  80% (56/70)Counting objects:  81% (57/70)Counting objects:  82% (58/70)Counting objects:  84% (59/70)Counting objects:  85% (60/70)Counting objects:  87% (61/70)Counting objects:  88% (62/70)Counting objects:  90% (63/70)Counting objects:  91% (64/70)Counting objects:  92% (65/70)Counting objects:  94% (66/70)Counting objects:  95% (67/70)Counting objects:  97% (68/70)Counting objects:  98% (69/70)Counting objects: 100% (70/70)Counting objects: 100% (70/70), done.
+Delta compression using up to 16 threads
+Compressing objects:   3% (1/27)Compressing objects:   7% (2/27)Compressing objects:  11% (3/27)Compressing objects:  14% (4/27)Compressing objects:  18% (5/27)Compressing objects:  22% (6/27)Compressing objects:  25% (7/27)Compressing objects:  29% (8/27)Compressing objects:  33% (9/27)Compressing objects:  37% (10/27)Compressing objects:  40% (11/27)Compressing objects:  44% (12/27)Compressing objects:  48% (13/27)Compressing objects:  51% (14/27)Compressing objects:  55% (15/27)Compressing objects:  59% (16/27)Compressing objects:  62% (17/27)Compressing objects:  66% (18/27)Compressing objects:  70% (19/27)Compressing objects:  74% (20/27)Compressing objects:  77% (21/27)Compressing objects:  81% (22/27)Compressing objects:  85% (23/27)Compressing objects:  88% (24/27)Compressing objects:  92% (25/27)Compressing objects:  96% (26/27)Compressing objects: 100% (27/27)Compressing objects: 100% (27/27), done.
+Writing objects:   2% (1/36)Writing objects:   5% (2/36)Writing objects:   8% (3/36)Writing objects:  11% (4/36)Writing objects:  13% (5/36)Writing objects:  16% (6/36)Writing objects:  19% (7/36)Writing objects:  22% (8/36)Writing objects:  25% (9/36)Writing objects:  27% (10/36)Writing objects:  30% (11/36)Writing objects:  33% (12/36)Writing objects:  36% (13/36)Writing objects:  38% (14/36)Writing objects:  41% (15/36)Writing objects:  44% (16/36)Writing objects:  47% (17/36)Writing objects:  50% (18/36)Writing objects:  52% (19/36)Writing objects:  55% (20/36)Writing objects:  58% (21/36)Writing objects:  61% (22/36)Writing objects:  63% (23/36)Writing objects:  66% (24/36)Writing objects:  69% (25/36)Writing objects:  72% (26/36)Writing objects:  75% (27/36)Writing objects:  77% (28/36)Writing objects:  80% (29/36)Writing objects:  83% (30/36)Writing objects:  86% (31/36), 288.00 KiB | 401.00 KiB/sWriting objects:  88% (32/36), 288.00 KiB | 401.00 KiB/sWriting objects:  91% (33/36), 288.00 KiB | 401.00 KiB/sWriting objects:  94% (34/36), 288.00 KiB | 401.00 KiB/sWriting objects:  97% (35/36), 288.00 KiB | 401.00 KiB/sWriting objects: 100% (36/36), 288.00 KiB | 401.00 KiB/sWriting objects: 100% (36/36), 1.01 MiB | 1.44 MiB/s, done.
+Total 36 (delta 17), reused 0 (delta 0)
+remote: Resolving deltas:   0% (0/17)[Kremote: Resolving deltas:   5% (1/17)[Kremote: Resolving deltas:  11% (2/17)[Kremote: Resolving deltas:  17% (3/17)[Kremote: Resolving deltas:  23% (4/17)[Kremote: Resolving deltas:  29% (5/17)[Kremote: Resolving deltas:  35% (6/17)[Kremote: Resolving deltas:  41% (7/17)[Kremote: Resolving deltas:  47% (8/17)[Kremote: Resolving deltas:  52% (9/17)[Kremote: Resolving deltas:  58% (10/17)[Kremote: Resolving deltas:  64% (11/17)[Kremote: Resolving deltas:  70% (12/17)[Kremote: Resolving deltas:  76% (13/17)[Kremote: Resolving deltas:  82% (14/17)[Kremote: Resolving deltas:  88% (15/17)[Kremote: Resolving deltas:  94% (16/17)[Kremote: Resolving deltas: 100% (17/17)[Kremote: Resolving deltas: 100% (17/17), completed with 17 local objects.[K
+To https://github.com/a02338629-code/BIOL3070-Shumway
+   4218067..d3bc2d4  master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+]0;~~$ git push origin master --force
+Username for 'https://github.com': a02338629-code
+Password for 'https://a02338629-code@github.com': 
+Everything up-to-date
+]0;~~$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	[31mmodified:   .rstudio/projects/f8ce556a/console07/E62FC348[m
+
+no changes added to commit (use "git add" and/or "git commit -a")
+]0;~~$ git ls-files
+.config/R/rsconnect/accounts/posit.cloud/Emma Shumway.dcf
+.config/rstudio/rstudio-prefs.json
+.gitconfig
+.rsconnect-python/servers.json
+.rstudio/addin_registry
+.rstudio/client-state/environment-grid.persistent
+.rstudio/client-state/source-column-manager.persistent
+.rstudio/client-state/themes.persistent
+.rstudio/client-state/vcs_git.persistent
+.rstudio/client-state/workbenchp.persistent
+.rstudio/history_database
+.rstudio/log/rsession-r1119511.log
+.rstudio/monitored/lists/command_palette_mru
+.rstudio/monitored/lists/file_mru
+.rstudio/monitored/lists/help_history_links
+.rstudio/monitored/lists/plot_publish_mru
+.rstudio/monitored/lists/project_mru
+.rstudio/monitored/lists/project_name_mru
+.rstudio/monitored/lists/user_dictionary
+.rstudio/projects/f8ce556a/console07/22215E41
+.rstudio/projects/f8ce556a/console07/22215E41.env
+.rstudio/projects/f8ce556a/console07/E62FC348
+.rstudio/projects/f8ce556a/console07/E62FC348.env
+.rstudio/projects/f8ce556a/console07/INDEX001
+.rstudio/projects_settings/last-project-path
+.rstudio/projects_settings/next-session-project
+.rstudio/projects_settings/project-id-mappings
+.rstudio/projects_settings/update-pkg-install-default
+.rstudio/rstudio-server.json
+.rstudio/rversion-settings/37ed7f8ce556a-RVersion
+.rstudio/rversion-settings/37ed7f8ce556a-RVersionHome
+.rstudio/rversion-settings/37ed7f8ce556a-RVersionLabel
+.rstudio/sessions/active/session-de83db41/explorer-cache/f102cd45626046c9aa94053537b8ea5f
+.rstudio/sessions/active/session-de83db41/graphics-r3/INDEX
+.rstudio/sessions/active/session-de83db41/graphics-r3/empty.png
+.rstudio/sessions/active/session-de83db41/properites/activity_state
+.rstudio/sessions/active/session-de83db41/properites/blocking_suspend
+.rstudio/sessions/active/session-de83db41/properites/created
+.rstudio/sessions/active/session-de83db41/properites/editor
+.rstudio/sessions/active/session-de83db41/properites/executing
+.rstudio/sessions/active/session-de83db41/properites/initial
+.rstudio/sessions/active/session-de83db41/properites/label
+.rstudio/sessions/active/session-de83db41/properites/last-used
+.rstudio/sessions/active/session-de83db41/properites/last_resumed
+.rstudio/sessions/active/session-de83db41/properites/last_state_updated
+.rstudio/sessions/active/session-de83db41/properites/launch-parameters
+.rstudio/sessions/active/session-de83db41/properites/project
+.rstudio/sessions/active/session-de83db41/properites/r-version
+.rstudio/sessions/active/session-de83db41/properites/r-version-home
+.rstudio/sessions/active/session-de83db41/properites/r-version-label
+.rstudio/sessions/active/session-de83db41/properites/running
+.rstudio/sessions/active/session-de83db41/properites/save_prompt_required
+.rstudio/sessions/active/session-de83db41/properites/suspend_timestamp
+.rstudio/sessions/active/session-de83db41/properites/working-dir
+.rstudio/sessions/active/session-de83db41/rmd-outputs
+.rstudio/sessions/active/session-de83db41/session-persistent-state
+.rstudio/sessions/active/session-de83db41/suspended-session-data/after_restart_command
+.rstudio/sessions/active/session-de83db41/suspended-session-data/built_package_path
+.rstudio/sessions/active/session-de83db41/suspended-session-data/console_actions
+.rstudio/sessions/active/session-de83db41/suspended-session-data/environment
+.rstudio/sessions/active/session-de83db41/suspended-session-data/environment_vars
+.rstudio/sessions/active/session-de83db41/suspended-session-data/history
+.rstudio/sessions/active/session-de83db41/suspended-session-data/libpaths
+.rstudio/sessions/active/session-de83db41/suspended-session-data/options
+.rstudio/sessions/active/session-de83db41/suspended-session-data/rversion
+.rstudio/sessions/active/session-de83db41/suspended-session-data/search_path/package_paths
+.rstudio/sessions/active/session-de83db41/suspended-session-data/search_path/search_path_elements
+.rstudio/sessions/active/session-de83db41/suspended-session-data/settings
+.rstudio/sessions/active/session-de83db41/unsaved-notebooks/7C9BA99E/1/chunks.json
+.rstudio/sessions/active/session-de83db41/unsaved-notebooks/7C9BA99E/1/ckqv01jb9eekx/00000f.csv
+.rstudio/sessions/active/session-de83db41/unsaved-notebooks/7C9BA99E/1/ckqv01jb9eekx/000010.error
+.rstudio/sessions/active/session-de83db41/unsaved-notebooks/7C9BA99E/1/csetup_chunk/00000f.csv
+.rstudio/sessions/active/session-de83db41/unsaved-notebooks/B625521C/1/c74dkno7pdif7/00001d.csv
+.rstudio/sessions/active/session-de83db41/unsaved-notebooks/B625521C/1/c74dkno7pdif7/00001f.csv
+.rstudio/sessions/active/session-de83db41/unsaved-notebooks/B625521C/1/c74dkno7pdif7/000020.metadata
+.rstudio/sessions/active/session-de83db41/unsaved-notebooks/B625521C/1/c74dkno7pdif7/000020.png
+.rstudio/sessions/active/session-de83db41/unsaved-notebooks/B625521C/1/c74dkno7pdif7/000020.snapshot
+.rstudio/sessions/active/session-de83db41/unsaved-notebooks/B625521C/1/c9a2olvcjanrt/000035.csv
+.rstudio/sessions/active/session-de83db41/unsaved-notebooks/B625521C/1/caxeek9kmy3u6/00000f.csv
+.rstudio/sessions/active/session-de83db41/unsaved-notebooks/B625521C/1/caxeek9kmy3u6/000011.csv
+.rstudio/sessions/active/session-de83db41/unsaved-notebooks/B625521C/1/caxeek9kmy3u6/000013.csv
+.rstudio/sessions/active/session-de83db41/unsaved-notebooks/B625521C/1/caxeek9kmy3u6/000014.metadata
+.rstudio/sessions/active/session-de83db41/unsaved-notebooks/B625521C/1/caxeek9kmy3u6/000014.png
+.rstudio/sessions/active/session-de83db41/unsaved-notebooks/B625521C/1/caxeek9kmy3u6/000014.snapshot
+.rstudio/sessions/active/session-de83db41/unsaved-notebooks/B625521C/1/chunks.json
+.rstudio/sessions/active/session-de83db41/unsaved-notebooks/B625521C/1/cr26nra6vu3ho/00000f.csv
+.rstudio/sessions/active/session-de83db41/unsaved-notebooks/B625521C/1/csetup_chunk/00000f.csv
+.rstudio/sessions/active/session-de83db41/viewer-cache/D19541F1.Rdata
+.sh_history
+.subversion/README.txt
+.subversion/config
+.subversion/servers
+R
+]0;~~$ ls -a
+.  ..  .config	.git  .gitconfig  .rsconnect-python  .rstudio  .sh_history  .subversion  R
+]0;~~$ 
